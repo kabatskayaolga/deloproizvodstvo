@@ -1,0 +1,142 @@
+// @import '../assets/slick'
+// @import '../assets/magnific-popup'
+
+@import url('https://fonts.googleapis.com/css?family=Tinos:400,700&subset=cyrillic')
+
+
+
+$activeColor: #440028
+
+
+*
+	margin: 0
+	padding: 0
+	transition: transform 0.4s, color 0.4s, background-color 0.4s,  background 0.4s
+	outline: none
+	box-sizing: border-box
+
+html,body
+	font-family: 'Tinos', serif
+	padding: 0
+	overflow-x: hidden
+	line-height: 1.4
+
+img
+	max-width: 100%	
+	vertical-align: middle
+
+
+
+.container
+	width: 80%
+	margin: 0 auto
+	padding: 10px 0
+	@media (max-width: 990px)
+		width: 90%
+
+.flex-wrapper
+	display: flex
+	justify-content: space-between
+	align-items: stretch
+	flex-wrap: wrap
+	.flex-column
+		&__1-4
+			flex-grow: 1
+			flex-basis: 300px
+
+////////////////////////////
+//       TIPOGRAPHY
+////////////////////////////
+
+
+
+h1
+		font-size: 4em
+		text-transform: uppercase
+		word-wrap: break-word
+		overflow-wrap: break-word
+		line-height: 1
+		margin: 2em 0 0.5em
+		.label
+			font-size: 0.4em
+			display: inline-block
+			background-color: $activeColor
+			color: white
+			padding: 0.3em 0.5em
+			text-transform: initial
+
+
+h3
+	font-size: 1.3em
+	line-height: 1
+	margin: 1em 0
+	color: $activeColor
+
+h4
+	font-size: 1.2em
+	line-height: 1
+	margin: 1em 0
+a
+	color: black
+	text-decoration: none
+
+
+a.button
+	border: 2px solid $activeColor
+	color: $activeColor
+	padding: 0.5em 1.5em
+	display: inline-block
+	margin: 1em 0
+	font-weight: 600
+	border-radius: 25px
+	cursor: pointer
+	&:hover
+		background-color: $activeColor
+		color: white
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2)
+
+
+
+.dark_section
+	background-color: $activeColor
+	color: white
+
+	a
+		color: white
+		text-decoration: none
+
+
+@import 'includes/header'
+@import 'includes/forms'
+@import 'includes/footer'
+
+.head_block_wrapp
+	background-image: url(../images/back.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 100vh
+.head_block
+	margin-top: 100px
+	text-align: center
+	max-width: 900px
+
+
+.head-directions
+	text-align: center
+	background-color: rgba(255, 255, 255, 0.5)
+	box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.2)
+	margin: 2em 0
+	padding: 1em 0
+	&__item
+		background-color: white
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4)
+		margin: 1em
+		padding: 2em
+
+
+
+// //////////////////
+// HOME PAGE
+// ///////////////////
+
+.head_home

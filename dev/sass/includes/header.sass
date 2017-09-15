@@ -1,0 +1,164 @@
+@import 'header-icons'
+
+.header
+	position: fixed
+	background-color: rgba(255, 255, 255, 0.85)
+	width: 100%
+
+.header_wrapper__top
+
+.header_logo
+	@media (max-width: 1200px)
+		width: 250px
+
+
+.header_contact
+	margin-right: 20px
+	&:last-child
+		margin-right: 0
+	
+	@media (max-width: 1260px)
+		&.header_contact__email
+			display: none
+	
+@media (max-width: 910px)
+	.header_search
+		display: none
+
+
+
+///////////////////////////////
+//       SOCIAL BUTTONS      //
+///////////////////////////////
+
+
+
+.soc
+	margin-right: 10px
+
+	&:last-child
+		margin-right: 0
+
+	@media (max-width: 460px)
+		&:nth-child(6),
+		&:nth-child(7)
+			display: none
+		&:nth-child(5)
+			margin-right: 0
+
+	@media (max-width: 360px)
+		&:nth-child(5)
+			display: none
+		&:nth-child(4)
+			margin-right: 0
+
+
+
+///////////////////////////////
+//         NAVIGATION        //
+///////////////////////////////
+
+
+.header_nav__menu
+	font-size: 1.2em
+	font-weight: 600
+	a.nav_button__hidden
+		padding: 5px
+		cursor: pointer
+		display: none
+		border: none
+		margin-right: 0
+		&:hover
+			background-color: $activeColor
+			border: none
+		@media (max-width: 890px)
+			display: inline-block
+
+	@media (max-width: 1800px)
+		font-size: 1.1em
+		
+	@media (max-width: 1640px)
+		font-size: 1em
+
+	.header_nav__menu_wrapper
+		@media (max-width: 890px)
+			display: none
+			position: absolute
+			right: 0
+			background-color: $activeColor
+			// padding: 15px 5%
+		a
+			margin-right: 1em
+			padding: 10px 0
+			border-bottom: 2px solid transparent
+			inline-block
+			&.active
+				color: white
+				background-color: $activeColor
+				margin-right: 0.7em
+				padding: 10px
+
+
+			&:hover
+				border-bottom: 2px solid $activeColor
+			&.hidden
+				display: none
+			@media (max-width: 890px)
+				color: white
+				display: block
+		& > a
+			&:last-child
+				margin-right: 0
+
+		.sub_menu, .sub_menu_wrapper
+			display: inline-block
+			position: relative
+			@media (max-width: 890px)
+				display: block
+
+
+		@media (max-width: 1580px) and (min-width: 890px)
+			a
+				&.active
+					padding: 10px 0
+					background-color: transparent
+					color: $activeColor
+					border-bottom: 2px solid $activeColor
+				&.hidden
+					display: inline
+			.sub_menu_wrapper
+				&:hover
+					> a
+						border-bottom: 2px solid $activeColor
+
+					.sub_menu
+						display: block
+						position: absolute
+						top: 160%
+						z-index: 432
+						background-color: rgba(255, 255, 255, 0.85)
+						border-left: 2px solid $activeColor
+						a
+							display: block
+							padding: 10px
+							margin: 0
+							&:hover
+								background-color: white
+
+			.sub_menu
+				display: none
+
+
+		@media (max-width: 890px)
+			a
+				border-bottom: 2px solid white
+				padding: 10px 5%
+				display: block
+				margin-right: 0
+				width: 100%
+				&.active, &:hover
+					padding: 10px 5%
+					background-color: white
+					color: $activeColor
+					border-top: 2px solid $activeColor
+					margin-top: -2px

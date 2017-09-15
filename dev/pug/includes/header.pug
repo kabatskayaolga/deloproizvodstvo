@@ -1,0 +1,129 @@
+header.header
+	.header_wrapper__top.dark_section
+		.header_container.container
+			.flex-wrapper
+
+				-
+					var
+						header_contacts = [
+						{
+							tel: '+7 (495) 150 18 17',
+							email: 'INFO@SEMINARNA.RU'
+						}
+					]
+
+
+
+				.header_contacts
+					each value in header_contacts
+						a.header_contact.header_contact__phone.contact-phone(href= 'tel:'+ value.tel)=  value.tel
+						a.header_contact.header_contact__email.contact-email(href= 'mailto:'+ value.email)=  value.email
+				.header_search.search_form
+					input(type='text' placeholder='Найдите то, что вас интересует').search_form__input
+					input(type='submit').search_form__submit
+
+
+
+				-
+					var 
+						social_block = [
+								{
+									href: '',
+									name: 'facebook',
+								},
+								{
+									href: '',
+									name: 'instagram',
+								},
+								{
+									href: '',
+									name: 'vk',
+								},
+								{
+									href: '',
+									name: 'google',
+								},
+								{
+									href: '',
+									name: 'twitter',
+								},
+								{
+									href: '',
+									name: 'youtube',
+								},
+								{
+									href: '',
+									name: 'slideshare',
+								}
+							]
+
+
+
+				.header_social.social_block
+					each value in social_block
+						a.soc(href= value.href, title= value.name, class= 'ico '+ value.name)
+
+	.header_wrapper__bottom
+		.header_container.container
+			.flex-wrapper
+
+				-
+					var 
+						header_logo__title = 'Профи Карьера',
+						header_logo__href = 'images/logo.png'
+					
+				.header_logo
+					img(src= header_logo__href, alt= header_logo__title)
+
+				-
+					var
+						header_nav_link = [
+						{
+							title: 'Курсы',
+							href: '#services',
+							class: 'active'
+						},
+						{
+							title: 'Обучение',
+							href: '#',
+							class: 'hidden',
+							sub_nav__menu: [
+								{
+									title: 'Корпоративные обучение',
+									href: '#portfolio'
+								},
+								{
+									title: 'Дистанционное обучение',
+									href: '#command',
+							
+								},
+							]
+						},
+						
+						{
+							title: 'Консалтинг',
+							href: '#advantages'
+						},
+						{
+							title: 'Бесплатные обучающие материлы',
+							href: '#how_we_are_working',
+							
+						},
+		
+					]
+				
+				.header_nav__menu
+					a.nav_button__hidden
+						.ico.menu
+
+					.header_nav__menu_wrapper
+						each value in header_nav_link
+							if value.sub_nav__menu
+								.sub_menu_wrapper
+									a(href= value.href, class= value.class)= value.title
+									.sub_menu
+										each val in value.sub_nav__menu
+											a(href= val.href, class= val.class)= val.title
+							else
+								a(href= value.href, class= value.class)= value.title	
+
