@@ -4,12 +4,12 @@ block title
 	| title
 block content 
 	include includes/header
-	.wrapper
+	.wrapper 	
 		.head_block_wrapp.head_home
 			.container
 				.head_block
 					h1
-						span.label Семинары по
+						span.label Курсы по
 						br
 						| делопроизводству
 						br
@@ -25,33 +25,49 @@ block content
 							var
 								directions = [
 									{
-										img: 'images/folder.png',
+										img: 'folder',
 										h4: 'Делопроизводство, документооборот',
 										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
 									},
 									{
-										img: 'images/archive.png',
+										img: 'archive',
 										h4: 'Архивное дело',
 										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
 									},
 									{
-										img: 'images/secretar.png',
+										img: 'student',
 										h4: 'Секретариат, Офис-менеджмент',
 										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
 									},
 									{
-										img: 'images/communication.png',
+										img: 'communication',
 										h4: 'Деловое общение и деловой этикет',
 										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
 									}
 								]
 						each value in directions
 							.flex-column__1-4.head-directions__item
-								img(src= value.img, alt= value.h4)
+								i(class= 'icon-' + value.img)
 								h4= value.h4
 								p= value.p
-								a.button Выбрать семинар
-						
+								a.button Выбрать курс
+					a.button Ознакомиться со всеми курсами
+	.aboutUs_block_wrapp
+		.container
+			.flex-wrapper
+				div.aboutUs_block
+					h2 О нас
+					p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+				div.slider_block
+					-
+						var
+							slider_documents = [
+								'images/documents/cert1-m.jpg',
+								'images/documents/cert2.jpg',
+								'images/documents/cert3.jpg'
+							]
+					each value in slider_documents
+						img(src= value)
 
 
 

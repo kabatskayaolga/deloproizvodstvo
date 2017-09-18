@@ -1,7 +1,7 @@
 header.header
 	.header_wrapper__top.dark_section
 		.header_container.container
-			.flex-wrapper
+			.flex-wrapper.flex-wrapper__center
 
 				-
 					var
@@ -16,8 +16,12 @@ header.header
 
 				.header_contacts
 					each value in header_contacts
-						a.header_contact.header_contact__phone.contact-phone(href= 'tel:'+ value.tel)=  value.tel
-						a.header_contact.header_contact__email.contact-email(href= 'mailto:'+ value.email)=  value.email
+						a.header_contact.header_contact__phone(href= 'tel:'+ value.tel)
+							i.icon-phone
+							| !{value.tel}
+						a.header_contact.header_contact__email(href= 'mailto:'+ value.email)
+							i.icon-mail
+							| !{value.email}
 				.header_search.search_form
 					input(type='text' placeholder='Найдите то, что вас интересует').search_form__input
 					input(type='submit').search_form__submit
@@ -61,11 +65,12 @@ header.header
 
 				.header_social.social_block
 					each value in social_block
-						a.soc(href= value.href, title= value.name, class= 'ico '+ value.name)
+						a.soc(href= value.href, title= value.name)
+							i(class= 'icon-'+ value.name)
 
 	.header_wrapper__bottom
 		.header_container.container
-			.flex-wrapper
+			.flex-wrapper.flex-wrapper__center
 
 				-
 					var 
@@ -114,7 +119,7 @@ header.header
 				
 				.header_nav__menu
 					a.nav_button__hidden
-						.ico.menu
+						i.icon-menu
 
 					.header_nav__menu_wrapper
 						each value in header_nav_link
