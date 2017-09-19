@@ -54,22 +54,51 @@ block content
 					a.button Ознакомиться со всеми курсами
 	.aboutUs_block_wrapp
 		.container
-			.flex-wrapper
-				div.aboutUs_block
+			.flex-wrapper.flex-wrapper__center
+				div.aboutUs_block.flex-column__1-3
 					h2 О нас
 					p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-				div.slider_block
-					-
-						var
-							slider_documents = [
-								'images/documents/cert1-m.jpg',
-								'images/documents/cert2.jpg',
-								'images/documents/cert3.jpg'
-							]
-					each value in slider_documents
-						img(src= value)
+				div.flex-column__2-3.slider_block
+						-
+							var
+								slider_documents = [
+									'images/documents/cert1-m.jpg',
+									'images/documents/cert2.jpg',
+									'images/documents/cert3.jpg',
+									'images/documents/cert1-m.jpg',
+									'images/documents/cert2.jpg',
+									'images/documents/cert3.jpg'
+								]
+						each value in slider_documents
+							a(href= value)
+								img(src= value)
 
-
+	
+	.specialOffer_block_wrapp.grey_section.center__wrapper
+		.container
+			h2 Получить спецпредложение
+			h3 Заполните пожалуйста форму обратной связи и мы подберем для Вас наиболее подходящее спецпредложение!
+			form.form_wrapper
+				.flex-wrapper.flex-wrapper__center
+					div.flex-column
+						input.form__input(type='text' placeholder='Ваше имя')
+					div.flex-column
+						input.form__input(type='text' placeholder='Ваше имя')
+					div.flex-column
+						input.form__input(type='text' placeholder='Ваше имя')
+				input.form__submit(type='submit' value='Отправить')
+	.advantages_block_wrapp.dark_section.center__wrapper
+		.container
+			h2 Наши преимущества
+			.flex-wrapper
+				div.flex-column__1-4
+					h4 Обучайся любым удобным способом(дистанционно, очно, индивидуально)
+				div.flex-column__1-4
+					h4 Возможность предложить свою тематику*
+				div.flex-column__1-4
+					h4 Находимся с самом центре Москвы, у нас Вам будет комфортно
+				div.flex-column__1-4
+					h4 Вкусности, гарячие и холодные напитки помогают сосредоточится на обучении
 
 	include includes/footer
 	script(src='js/script.js?ver=0.001')

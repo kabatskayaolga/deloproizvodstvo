@@ -33,5 +33,31 @@
 		&__submit
 			background: url('../images/header_sprites.png') -78px -0
 				
+.form_wrapper
+	.form		
+		&__input
+			border: none
+			background-color: transparent
+			border-bottom: 2px solid $activeColor
+			min-width: 300px
+			padding: 5px
+			color: $activeColor
+			font-size: 1em
+			font-family: 'Tinos', serif
 
-			
+		&__submit
+			border: 2px solid $activeColor
+			color: $activeColor
+			padding: 0.5em 1.5em
+			display: inline-block
+			margin: 1em 0
+			font-weight: 600
+			border-radius: 25px
+			cursor: pointer
+			font-size: 1em
+			font-family: 'Tinos', serif
+			&:hover
+				background-color: $activeColor
+				color: white
+				box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2)
+				

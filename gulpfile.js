@@ -53,6 +53,8 @@ var uglify = require('gulp-uglify');
 gulp.task('scripts', function() {
     gulp.src([
         './dev/assets/jquery-3.2.1.min.js',
+        './node_modules/slick-carousel/slick/slick.min.js',
+        './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
         './dev/js/*.js'
         ])
         .pipe(plumber())

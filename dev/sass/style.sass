@@ -1,6 +1,6 @@
 // @import '../assets/slick'
-// @import '../assets/magnific-popup'
-
+@import '../assets/magnific-popup'
+@import '../../node_modules/slick-carousel/slick/slick.scss'
 @import url('https://fonts.googleapis.com/css?family=Tinos:400,700&subset=cyrillic')
 
 
@@ -33,6 +33,10 @@ img
 	padding: 10px 0
 	@media (max-width: 990px)
 		width: 90%
+.center__wrapper
+	text-align: center
+	.flex-wrapper
+		justify-content: center
 
 .flex-wrapper
 	display: flex
@@ -44,10 +48,23 @@ img
 	&__center
 		align-items: center
 	.flex-column
+		
 		&__1-4
 			flex-grow: 1
 			flex-basis: 300px
-
+		&__1-2
+			flex-grow: 1
+			flex-basis: 300px
+		&__1-3
+			flex-grow: 1
+			flex-basis: 300px
+		&__2-3
+			flex-grow: 2
+			flex-basis: 300px
+	[class*="flex-col"]
+		margin-right: 2em
+		&:last-child
+			margin-right: 0
 ////////////////////////////
 //       TIPOGRAPHY
 ////////////////////////////
@@ -84,12 +101,20 @@ h2
 	color: white
 	display: inline-block
 	padding: 0.2em 0.3em
+	@media (max-width: 700px)
+		font-size: 2em
+	@media (max-width: 400px)
+		font-size: 1.5em
 
 h3
 	font-size: 1.3em
-	line-height: 1
+	line-height: 1.2
 	margin: 1em 0
 	color: $activeColor
+	@media (max-width: 700px)
+		font-size: 1.2em
+	@media (max-width: 400px)
+		font-size: 1.1em
 
 h4
 	font-size: 1.2em
@@ -114,7 +139,8 @@ a.button
 		color: white
 		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2)
 
-
+.grey_section
+	background-color: #e6e4e4
 
 .dark_section
 	background-color: $activeColor
@@ -167,12 +193,76 @@ a.button
 					background-color: white
 
 
-// //////////////////
-// HOME PAGE  aboutUs
-// ///////////////////
+///////////////////////////////
+//    SLIDER + POPUP_IMAGE
+///////////////////////////////
 
 
-.aboutUs_block_wrapp
-	.slider_block
-		img
-			max-height: 250px
+
+.slider_block
+	width: 300px
+	margin: 1em
+	position: relative
+	img
+		max-height: 250px
+		margin: 0 0.5em
+
+	.slick-arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 0
+		width: 60px
+		left: -30px
+		height: 60px
+		background-color: initial
+		border: none
+		z-index: 10
+		cursor: pointer
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			width: 40px
+			height: 3px
+			background-color: $activeColor
+		&:before
+			transform: rotate(45deg) translateX(-11px) translateY(30px)
+		&:after	
+			transform: rotate(-45deg) translateX(-11px) translateY(-30px)
+		&.slick-next
+			right: -30px
+			left: initial
+			transform: rotate(180deg) translateY(50%)
+
+
+
+	.slick-dots
+		text-align: center
+		li
+			list-style-type: none
+			display: inline
+			margin: 0 0.1em
+			button
+				font-size: 0
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				border: 2px solid $activeColor
+				background-color: initial
+				cursor: pointer
+			&.slick-active
+				button
+					background-color: $activeColor
+
+
+
+.specialOffer_block_wrapp
+	.flex-wrapper
+		@media (max-width: 740px)
+			flex-direction: column
+			.flex-column
+				margin-right: 0 
+		.flex-column
+			margin-bottom: 1em
+			
