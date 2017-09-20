@@ -20,37 +20,38 @@ block content
 
 				.head-directions
 					h3 Выберите направление или ознакомтесь со всеми предложенными вариантами
-					.flex-wrapper
-						-
-							var
-								directions = [
-									{
-										img: 'folder',
-										h4: 'Делопроизводство, документооборот',
-										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
-									},
-									{
-										img: 'archive',
-										h4: 'Архивное дело',
-										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
-									},
-									{
-										img: 'student',
-										h4: 'Секретариат, Офис-менеджмент',
-										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
-									},
-									{
-										img: 'communication',
-										h4: 'Деловое общение и деловой этикет',
-										p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
-									}
-								]
-						each value in directions
-							.flex-column__1-4.head-directions__item
-								i(class= 'icon-' + value.img).icon_big
-								h4= value.h4
-								p= value.p
-								a.button Выбрать курс
+					.flex-wrapper__container
+						.flex-wrapper
+							-
+								var
+									directions = [
+										{
+											img: 'folder',
+											h4: 'Делопроизводство, документооборот',
+											p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
+										},
+										{
+											img: 'archive',
+											h4: 'Архивное дело',
+											p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
+										},
+										{
+											img: 'student',
+											h4: 'Секретариат, Офис-менеджмент',
+											p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
+										},
+										{
+											img: 'communication',
+											h4: 'Деловое общение и деловой этикет',
+											p: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя'
+										}
+									]
+							each value in directions
+								.flex-column__1-4.head-directions__item
+									i(class= 'icon-' + value.img).icon_big
+									h4= value.h4
+									p= value.p
+									a.button Выбрать курс
 					a.button Ознакомиться со всеми курсами
 	.aboutUs_block_wrapp
 		.container
@@ -58,7 +59,8 @@ block content
 				div.aboutUs_block.flex-column__1-3
 					h2 О нас
 					p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-				div.flex-column__2-3.slider_block.about_slider
+				div.flex-column__2-3
+					.slider_block.about_slider
 						-
 							var
 								slider_documents = [
@@ -130,35 +132,36 @@ block content
 							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
 						},
 						{
-							specialty: 'Тренер-практик',
-							name: 'Коновалов Сергей Владимирович',
-							photo: 'images/lecturers/20555c2.jpg',
-							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
+							specialty: 'Бизнес-тренер - преподаватель',
+							name: 'Муталов Артур Сагадеевич',
+							photo: 'images/lecturers/16e8e67a.png',
+							about: 'Эксперт-практик  в области разработки бизнес-процессов и автоматизации систем управления информацией и поддержки управленческих решений.'
+						},
+						{
+							specialty: 'Бизнес-тренер, коуч',
+							name: 'Александр Петрищев',
+							photo: 'images/lecturers/595c0e1c.jpg',
+							about: 'Разработчик и методист. Автор более 30 программ по темам: ораторское искусство, мастерство общения, лидерские тренинги, взаимоотношения, конфликтология, командообразование, увеличение продаж, стрессоустойчивость, управленческие тренинги.'
 						},
 						{
 							specialty: 'Тренер-практик',
-							name: 'Коновалов Сергей Владимирович',
-							photo: 'images/lecturers/20555c2.jpg',
-							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
+							name: 'Cосновая Анна Владимировна',
+							photo: 'images/lecturers/6fbff1f.jpg',
+							about: 'Сертифицированный специалист в области стратегического менеджмента и Learning and knowledge management (управления знаниями) Эксперт-практик в области корпоративного и дистанционного обучения Методист и разработчик учебных модульных программ и учебно-методических комплексов и материалов в ЦДР «Профи-Карьера»'
 						},
 						{
 							specialty: 'Тренер-практик',
-							name: 'Коновалов Сергей Владимирович',
-							photo: 'images/lecturers/20555c2.jpg',
-							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
+							name: 'Терновой Николай',
+							photo: 'images/lecturers/29647d76.jpg',
+							about: 'Автор и разработчик обучающих программ, бизнес тренер'
 						},
 						{
 							specialty: 'Тренер-практик',
-							name: 'Коновалов Сергей Владимирович',
-							photo: 'images/lecturers/20555c2.jpg',
-							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
+							name: 'Григорьева Татьяна Олеговна',
+							photo: 'images/lecturers/5ecee2b.jpg',
+							about: 'Кандидат экономических наук, консультант по организационному развитию, генеральный директор "Профи-Карьера", сертифицированный тренер, специалист в области развития и обучения персонала'
 						},
-						{
-							specialty: 'Тренер-практик',
-							name: 'Коновалов Сергей Владимирович',
-							photo: 'images/lecturers/20555c2.jpg',
-							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
-						}
+					
 					]
 				each value in lecturers
 					div
@@ -170,6 +173,98 @@ block content
 							p= value.about
 							a.button Задать вопрос лектору
 
+	.lessons_block_wrapp.grey_section
+		.container
+			.center__wrapper
+				h2 Где проходят занятия
+			.flex-wrapper.firs-flex
+				-
+					var lessons = [
+						{
+							folder: 'beige-hall',
+							images: ['IMG_264.jpg', 'IMG_2643.jpg', 'IMG_2650web.jpg', 'IMG_2659.jpg', 'IMG_2661-2web.jpg', 'IMG_6676.jpg', 'кофезона.jpg'],
+							text: '<strong>Залы оснащены</strong> самым современным оборудованием для комфортного обучения. </p><p><strong>Мы предоставляем</strong> сытные кофе-паузы'
+						},
+						{
+							folder: 'black-hall',
+							images: ['IMG_2686.jpg', 'IMG_2688.jpg', 'IMG_6640.jpg', 'IMG_6644.jpg', 'IMG_6648.jpg', 'IMG_6649.jpg'],
+							text: 'В перерывах доступен <strong>вай-фай</strong> </p>' +
+								'<p><strong>Оплата любым способом:</strong></p>' +
+								'<ul><li>безналичный расчет для юр.лиц,</li>' +
+								'<li>оплата через Интернет на счет юр.лица,</li>' +
+								'наличными на месте.'
+						},
+						{
+							folder: 'restaurant',
+							images: ['IMG_5109.jpg', 'IMG_5110.jpg', 'IMG_5113.jpg', 'IMG_5116.jpg', 'IMG_5117.jpg', 'IMG_5128.jpg'],
+							text: '<strong>Комплексные обеды в Балчуг-плаза</strong> (престижный офисный комплекс класса А+, где расположено российское отделение Google, Газпромбанк)'
+						},
+						{
+							folder: 'hotel',
+							images: ['8320f24e.jpeg', 'XXL.jpeg', 'XXL-2.jpeg', 'XXL-3.jpeg'],
+							text: '<strong>Гостиница расположена в том же здании, где проходит обучение </strong>(гости столицы имеют возможность остановиться в гостинице в нашем же здании, можем помочь с размещением и бронированием)'
+						},
+					]
+				each value in lessons
+					.flex-column__1-4
+						.flex-wrapper.flex-content-column
+							div
+								.slider_block.lessons_slider
+									each val in value.images
+										a(href='images/'+value.folder+'/'+val)
+											image(src='images/'+value.folder+'/'+val)
+							div
+								p !{value.text}
+
+	.reviews_block_wrapp.dark_section.center__wrapper
+		.container
+			h2 Отзывы любимых клиентов
+			.slider_block.reviews_slider
+				-
+					var
+						slider_documents = [
+							'images/reviews/avk-delovaya-perepiska.jpg',
+							'images/reviews/fmba-sekretari.jpg',
+							'images/reviews/gazproektinzhiniring-delovaya-perepis.jpg',
+							'images/reviews/gazpromneft-sekretari.jpg',
+							'images/reviews/infokom-processnyy-podhod.jpg',
+							'images/reviews/kanada-etiket.jpg',
+
+							'images/reviews/kazcink-iso-grigoreva.jpg',
+							'images/reviews/kosmicheskaya-svyaz-etiket.jpg',
+							'images/reviews/rostelekom.jpg',
+							'images/reviews/rostelekom-upravl-navyki.jpg',
+							'images/reviews/veb-lizing.jpg'
+						]
+				each value in slider_documents
+					a(href= value)
+						img(src= value)
+
+
+
+	.partners_block_wrapp.center__wrapper
+		.container
+			h2 Наши партнеры
+			.slider_block.partners_slider
+				-
+					var
+						clients = [
+							'images/partners/alfabank.jpg',
+							'images/partners/autovaz.png',
+							'images/partners/gazprom.jpg',
+							'images/partners/irkenergo.jpg',
+							'images/partners/KES.jpg',
+							'images/partners/logo-aeroflot.jpg',
+
+							'images/partners/logo-nizhfarm.jpg',
+							'images/partners/lukoil.jpg',
+							'images/partners/mosgaz.jpg',
+							'images/partners/mosvodokanal.jpg',
+							'images/partners/ntv-logo.jpg'
+						]
+				each value in clients
+					a(href= value)
+						img(src= value)
 
 	include includes/footer
 	script(src='js/script.js?ver=0.001')

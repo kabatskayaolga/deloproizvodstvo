@@ -25,24 +25,27 @@ img
 	max-width: 100%	
 	vertical-align: middle
 
-
+ul
+	padding-left: 20px
 
 .container
 	width: 90%
 	margin: 0 auto
-	padding: 10px 0
+	padding: 10px 0 2em
 	@media (max-width: 990px)
 		width: 90%
 .center__wrapper
 	text-align: center
 	.flex-wrapper
 		justify-content: center
-
+.flex-wrapper__container
+	// padding-right: 2em
 .flex-wrapper
 	display: flex
 	justify-content: space-between
 	align-items: stretch
 	flex-wrap: wrap
+	margin-right: -2em
 	@media (min-width: 400px)
 		padding: 0 1em
 	&__center
@@ -51,7 +54,8 @@ img
 		
 		&__1-4
 			flex-grow: 1
-			flex-basis: 300px
+			flex-basis: 260px
+			width: 18%
 		&__1-2
 			flex-grow: 1
 			flex-basis: 300px
@@ -61,10 +65,23 @@ img
 		&__2-3
 			flex-grow: 2
 			flex-basis: 300px
-	[class*="flex-col"]
+	&>div
 		margin-right: 2em
-		&:last-child
+
+	&.flex-content-column
+		flex-direction: column
+		width: 100%
+		&>div
 			margin-right: 0
+	.flex-wrapper
+		padding: 0
+	& > .flex-column__1-4
+		&:nth-child(2n)
+			.flex-content-column
+				@media (min-width: 670px)
+					flex-direction: column-reverse
+		// &:last-child
+		// 	margin-right: 0
 ////////////////////////////
 //       TIPOGRAPHY
 ////////////////////////////
@@ -173,11 +190,11 @@ a.button
 		background-color: rgba(255, 255, 255, 0.5)
 		box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.2)
 		margin: 2em 0 -20em
-		padding: 1em 0
+		padding: 1em 1em
 		&__item
 			background-color: white
 			box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4)
-			margin: 1em
+			margin-bottom: 1em
 			padding: 2em
 			transition: color 0s
 			[class^="icon-"], [class*=" icon-"]
@@ -200,12 +217,12 @@ a.button
 
 
 .slider_block
-	width: 300px
-	padding: 1em
+	// max-width: 600px
+	width: 100%
 	position: relative
 	
 	.slick-slide
-		margin: 0 1em
+		padding: 0 1em
 	.slick-arrow
 		position: absolute
 		top: 50%
@@ -233,11 +250,16 @@ a.button
 			right: -30px
 			left: initial
 			transform: rotate(180deg) translateY(50%)
-
+		&+.slick-list
+			padding: 0 1em
+	.slick-disabled
+		opacity: 0.3
 
 
 	.slick-dots
 		text-align: center
+		padding: 0
+		margin-bottom: 1em
 		li
 			list-style-type: none
 			display: inline
@@ -254,27 +276,41 @@ a.button
 				button
 					background-color: $activeColor
 
+.dark_section
+	.slick-arrow
+		&:before,
+		&:after
+			background-color: white
+
 .about_slider
+	max-width: 1000px
+	@media (max-width: 1500px)
+		max-width: 600px
+	@media (max-width: 1300px)
+		max-width: 400px
 	img
 		max-height: 250px
 
 
 .specialOffer_block_wrapp
 	.flex-wrapper
-		@media (max-width: 740px)
-			flex-direction: column
-			.flex-column
-				margin-right: 0 
+		// @media (max-width: 740px)
+		// 	flex-direction: column
+		// 	.flex-column
+		// 		margin-right: 0 
 		.flex-column
 			margin-bottom: 1em
 			
 
 .lecturers_slider
 	width: 100%
+	max-width: initial
 	.slick-arrow
 		left: 0px
 		&.slick-next
 			right: 0px
+		
+
 	.slick-slide
 		.hidden_block
 			@media (min-width: 840px)
@@ -300,26 +336,26 @@ a.button
 					position: relative
 					z-index: 1
 
-					@media (max-width: 1200px) and (min-width: 840px)
+					@media (max-width: 1235px) and (min-width: 840px)
 						transform: scale(0.8) translateX(-10%)
 					// 4 slide	
 					&+.slick-slide
-						@media (min-width: 1200px)
+						@media (min-width: 1235px)
 							transform: scale(0.85)
 
 
 						// 5 slide	
 						&+.slick-slide
-							@media (min-width: 1200px)
+							@media (min-width: 1235px)
 								transform: scale(0.7) translateX(-30%)
 
 					// center slide	
-					@media (min-width: 1200px) and (min-width: 840px)		
+					@media (min-width: 1235px) and (min-width: 840px)		
 						.image_wrapper
 							box-shadow: 0.8em 0.8em 0 0.8em $activeColor
 						.hidden_block
 							display: block
-				@media (max-width: 1200px) and (min-width: 900px)	
+				@media (max-width: 1235px) and (min-width: 900px)	
 					.image_wrapper
 						box-shadow: 0.7em 0.7em 0 0.7em $activeColor
 					.hidden_block
@@ -336,7 +372,7 @@ a.button
 			top: 130px
 		@media (max-width: 1480px)
 			top: 110px
-		@media (max-width: 1200px)
+		@media (max-width: 1235px)
 			top: 150px
 		@media (max-width: 1000px)
 			top: 110px
@@ -349,10 +385,12 @@ a.button
 		margin: 0 auto
 		border-radius: 50%
 		border: 2px solid $activeColor
+		img
+			min-width: 100%
 		@media (max-width: 1760px)
 			width: 280px
 			height: 280px
-		@media (max-width: 1660px)
+		@media (max-width: 1685px)
 			width: 250px
 			height: 250px
 		@media (max-width: 1480px)
@@ -361,7 +399,7 @@ a.button
 		@media (max-width: 1310px)
 			width: 200px
 			height: 200px
-		@media (max-width: 1200px)
+		@media (max-width: 1235px)
 			width: 320px
 			height: 320px
 		@media (max-width: 1130px)
@@ -378,3 +416,16 @@ a.button
 		border-radius: 15px
 		margin-top: 0.3em
 		display: inline-block
+
+.lessons_block_wrapp
+
+	.lessons_slider
+		margin-bottom: 1em
+
+		.slick-slide 
+			padding: 0
+
+		img
+			width: 100%
+	p
+		margin-bottom: 1em
