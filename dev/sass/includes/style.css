@@ -73,3 +73,29 @@
 .icon-student:before {
   content: "\e90d";
 }
+
+
+.icon-conversation:before {
+  content: "\e916";
+}
+.icon-moscow:before {
+  content: "\e915";
+}
+.icon-tea:before {
+  content: "\e914";
+}
+.icon-keyboard:before {
+  content: "\e913";
+}
+.icon-cup:before {
+  content: "\e912";
+}
+.icon-wifi:before {
+  content: "\e911";
+}
+.icon-email:before {
+  content: "\e910";
+}
+.icon-loc:before {
+  content: "\e90f";
+}

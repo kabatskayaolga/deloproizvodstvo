@@ -47,7 +47,7 @@ block content
 								]
 						each value in directions
 							.flex-column__1-4.head-directions__item
-								i(class= 'icon-' + value.img)
+								i(class= 'icon-' + value.img).icon_big
 								h4= value.h4
 								p= value.p
 								a.button Выбрать курс
@@ -91,14 +91,30 @@ block content
 		.container
 			h2 Наши преимущества
 			.flex-wrapper
-				div.flex-column__1-4
-					h4 Обучайся любым удобным способом(дистанционно, очно, индивидуально)
-				div.flex-column__1-4
-					h4 Возможность предложить свою тематику*
-				div.flex-column__1-4
-					h4 Находимся с самом центре Москвы, у нас Вам будет комфортно
-				div.flex-column__1-4
-					h4 Вкусности, гарячие и холодные напитки помогают сосредоточится на обучении
+				-
+					var advantages = [
+						{
+							icon: 'conversation',
+							h4: 'Обучайся любым удобным способом(дистанционно, очно, индивидуально)'
+						},
+						{
+							icon: 'keyboard',
+							h4: 'Возможность предложить свою тематику*'
+						},
+						{
+							icon: 'moscow',
+							h4: 'Находимся с самом центре Москвы, у нас Вам будет комфортно'
+						},
+						{
+							icon: 'tea',
+							h4: 'Вкусности, гарячие и холодные напитки помогают сосредоточится на обучении'
+						},
 
+					]
+				each value in advantages
+					div.flex-column__1-4
+						i(class='icon-'+ value.icon).icon_big
+						h4= value.h4
+				
 	include includes/footer
 	script(src='js/script.js?ver=0.001')

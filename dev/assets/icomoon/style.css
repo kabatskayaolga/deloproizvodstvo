@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?o8p0al');
-  src:  url('fonts/icomoon.eot?o8p0al#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o8p0al') format('truetype'),
-    url('fonts/icomoon.woff?o8p0al') format('woff'),
-    url('fonts/icomoon.svg?o8p0al#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?d036ko');
+  src:  url('fonts/icomoon.eot?d036ko#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?d036ko') format('truetype'),
+    url('fonts/icomoon.woff?d036ko') format('woff'),
+    url('fonts/icomoon.svg?d036ko#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-loc:before {
+  content: "\e90f";
+}
+.icon-email:before {
+  content: "\e910";
+}
+.icon-wifi:before {
+  content: "\e911";
+}
+.icon-cup:before {
+  content: "\e912";
+}
+.icon-keyboard:before {
+  content: "\e913";
+}
+.icon-tea:before {
+  content: "\e914";
+}
+.icon-moscow:before {
+  content: "\e915";
+}
+.icon-conversation:before {
+  content: "\e916";
+}
 .icon-menu:before {
   content: "\e90e";
 }
