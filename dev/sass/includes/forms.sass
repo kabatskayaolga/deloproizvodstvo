@@ -1,6 +1,7 @@
 
 
-.search_form
+.search_form,
+.mail_form
 	position: relative
 
 	&__input
@@ -8,6 +9,7 @@
 		background-color: transparent
 		border-bottom: 2px solid $activeColor
 		min-width: 300px
+		width: 100%
 		padding: 5px
 		color: white
 
@@ -22,7 +24,7 @@
 		bottom: 5px
 		cursor: pointer
 
-.dark_section
+.dark_section, footer
 	::placeholder
 		color: white
 	.search_form
@@ -31,7 +33,12 @@
 			border-bottom: 2px solid white
 
 		&__submit
-			background: url('../images/header_sprites.png') -78px -0
+			background: url('../images/search.png') no-repeat
+			background-size: cover
+	.mail_form
+		&__submit
+			background: url('../images/mail.png') no-repeat
+			background-size: cover
 				
 .form_wrapper
 	.form		

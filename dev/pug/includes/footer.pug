@@ -1,0 +1,100 @@
+footer.footer
+	.footer_container.container
+		.flex-wrapper
+			.flex-column__1-4
+				-
+					var 
+						header_logo__title = 'Профи Карьера',
+						header_logo__href = 'images/logo-footer.png'
+					
+				.footer_logo
+					img(src= header_logo__href, alt= header_logo__title)
+				
+
+
+				-
+					var
+						footer_nav_link = [
+						{
+							title: 'О нас',
+							href: '#',
+						},
+						{
+							title: 'Наши преимущества',
+							href: '#',
+						},
+						
+						{
+							title: 'Тренеры и преподаватель',
+							href: '#'
+						},
+						{
+							title: 'Где проходят занятия',
+							href: '#',
+							
+						},
+						{
+							title: 'Отзывы любимых клиентов',
+							href: '#',
+							
+						},
+		
+					]
+				
+				.footer_nav__menu
+					each value in footer_nav_link
+						a(href= value.href)= value.title	
+
+			.flex-column__1-4
+				.footer_nav__menu
+					each value in header_nav_link
+						if value.sub_nav__menu
+							each val in value.sub_nav__menu
+								a(href= val.href)= val.title
+						else
+							a(href= value.href)= value.title	
+				h3 Подписывайтесь на нас
+				.footer_social.social_block
+					each value in social_block
+						a.soc(href= value.href, title= value.name)
+							i(class= 'icon-'+ value.name)
+
+
+			.flex-column__1-4
+				-
+					var
+						footer_contacts = [
+							{
+								tel: '+7 (495) 150 18 17',
+								loc: '121087, г. Москва, ул. Садовническая, д. 5',
+								email: 'INFO@SEMINARNA.RU'
+							}
+						]
+				.footer_contacts
+					each value in footer_contacts
+						a.footer_contact(href= 'tel:'+ value.tel)
+							i.icon-phone 
+							| !{value.tel}
+						a.footer_contact(href= 'mailto:'+ value.email)
+							i.icon-loc 
+							| !{value.loc}
+						a.footer_contact(href= 'mailto:'+ value.email)
+							i.icon-mail 
+							| !{value.email}
+				p Заявки принимаются ежедневно
+				h3 Консультации
+				p с пн по пт с 9:00-18:00. 
+
+
+			.flex-column__1-4
+				h3 Поиск по сайту
+				.footer_search.search_form
+					input(type='text' placeholder='Найдите то, что вас интересует').search_form__input
+					input(type='submit').search_form__submit
+				br
+				h3 Подписка на рассылку
+				.footer_form.mail_form
+					input(type='text' placeholder='Введите ваш e-mail').search_form__input
+					input(type='submit').mail_form__submit
+
+
