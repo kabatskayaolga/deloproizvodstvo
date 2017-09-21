@@ -90,27 +90,27 @@ ul
 
 
 h1
-		font-size: 4em
-		text-transform: uppercase
-		word-wrap: break-word
-		overflow-wrap: break-word
-		line-height: 1
-		margin: 2em 0 0.5em
-		.label
-			font-size: 0.4em
-			display: inline-block
-			background-color: $activeColor
-			color: white
-			padding: 0.3em 0.5em
-			text-transform: initial
-			@media (max-width: 400px)
-				font-size: 0.6em
-		@media (max-width: 1200px)
-			font-size: 3em
-		@media (max-width: 700px)
-			font-size: 2em
+	font-size: 4em
+	text-transform: uppercase
+	word-wrap: break-word
+	overflow-wrap: break-word
+	line-height: 1
+	margin: 2em 0 0.5em
+	.label
+		font-size: 0.4em
+		display: inline-block
+		background-color: $activeColor
+		color: white
+		padding: 0.3em 0.5em
+		text-transform: initial
 		@media (max-width: 400px)
-			font-size: 1.5em
+			font-size: 0.6em
+	@media (max-width: 1200px)
+		font-size: 3em
+	@media (max-width: 700px)
+		font-size: 2em
+	@media (max-width: 400px)
+		font-size: 1.5em
 h2
 	font-size: 3em
 	line-height: 1
@@ -153,7 +153,8 @@ a.button
 	font-weight: 600
 	border-radius: 25px
 	cursor: pointer
-	&:hover
+	&:hover,
+	&.active
 		background-color: $activeColor
 		color: white
 		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2)
@@ -177,7 +178,7 @@ a.button
 .head_block_wrapp
 	
 	background-repeat: no-repeat
-	background-size: cover
+	background-size: 120%
 	background-position: top center
 	@media (max-width: 1425px)
 		background-size: 200%
@@ -188,6 +189,12 @@ a.button
 			background-size: 1500px
 			background-position: 40% top 
 
+
+.navigation_buttons
+	a
+		margin: 1em 0.2em
+		padding: 0.3em 0.6em
+		color: $activeColor
 ///////////////////////////////
 //    SLIDER + POPUP_IMAGE
 ///////////////////////////////
