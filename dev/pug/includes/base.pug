@@ -3,5 +3,6 @@ html
 	head
 		include head
 		block header
-	body
+	block vars
+	body(class= bodyClass)
 		block content

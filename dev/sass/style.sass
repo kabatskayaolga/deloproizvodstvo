@@ -6,7 +6,7 @@
 
 
 $activeColor: #440028
-
+$greyColor: #e6e4e4
 
 *
 	margin: 0
@@ -159,7 +159,7 @@ a.button
 		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2)
 
 .grey_section
-	background-color: #e6e4e4
+	background-color: $greyColor
 
 .dark_section
 	background-color: $activeColor
@@ -175,10 +175,9 @@ a.button
 @import 'includes/footer'
 
 .head_block_wrapp
-	background-image: url(../images/back.jpg)
+	
 	background-repeat: no-repeat
 	background-size: cover
-	margin-bottom: 20em
 	background-position: top center
 	@media (max-width: 1425px)
 		background-size: 200%
@@ -188,37 +187,6 @@ a.button
 		@media (max-width: 1000px)
 			background-size: 1500px
 			background-position: 40% top 
-
-	.head_block
-		margin-top: 100px
-		text-align: center
-		max-width: 900px
-
-
-	.head-directions
-		text-align: center
-		background-color: rgba(255, 255, 255, 0.5)
-		box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.2)
-		margin: 2em 0 -20em
-		padding: 1em 1em
-		&__item
-			background-color: white
-			box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4)
-			margin-bottom: 1em
-			padding: 2em
-			transition: color 0s
-			[class^="icon-"], [class*=" icon-"]
-				color: $activeColor
-			&:hover
-				background-color: rgba(68, 0, 40, 0.9)
-				color: white
-
-				[class^="icon-"], [class*=" icon-"]
-					color: white
-				a.button
-					color: $activeColor
-					background-color: white
-
 
 ///////////////////////////////
 //    SLIDER + POPUP_IMAGE
@@ -304,23 +272,62 @@ a.button
 		&:after
 			background-color: white
 
+
+
+.flex-wrapper__container
+
+	background-color: rgba(255, 255, 255, 0.5)
+	box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.2)
+	margin: 2em 0 2em
+	padding: 1em 1em
+
+
+
+
+///////////////////////////////////
+//            HOME page
+///////////////////////////////////
+
+.home
+	.head_block_wrapp
+		margin-bottom: 20em
+		background-image: url(../images/back.jpg)
+		.head_block
+			margin-top: 100px
+			text-align: center
+			max-width: 900px
+
+
+		.head-directions
+			margin: 2em 0 -20em
+			text-align: center
+			&__item
+				background-color: white
+				box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4)
+				margin-bottom: 1em
+				padding: 2em
+				transition: color 0s
+				[class^="icon-"], [class*=" icon-"]
+					color: $activeColor
+				&:hover
+					background-color: rgba(68, 0, 40, 0.9)
+					color: white
+
+					[class^="icon-"], [class*=" icon-"]
+						color: white
+					a.button
+						color: $activeColor
+						background-color: white
+
+
 .about_slider
 	margin-top: 2em
-	// max-width: 1000px
-	// @media (max-width: 1500px)
-	// 	max-width: 600px
-	// @media (max-width: 1300px)
-	// 	max-width: 300px
 	img
 		max-height: 250px
 
 
 .specialOffer_block_wrapp
 	.flex-wrapper
-		// @media (max-width: 740px)
-		// 	flex-direction: column
-		// 	.flex-column
-		// 		margin-right: 0 
 		.flex-column
 			margin-bottom: 1em
 			
@@ -452,3 +459,62 @@ a.button
 			width: 100%
 	p
 		margin-bottom: 1em
+
+
+
+////////////////////////////////
+//        page CATEGORIES
+////////////////////////////////
+.category
+	.wrapper
+	.head_block_wrapp
+		background-image: url(../images/back-category.jpg)
+		.head_block
+			margin-top: 100px
+			max-width: 900px
+
+	.flex-wrapper__container
+		background-color: rgba(68, 0, 40, 0.15)
+		
+.events_block__wrapper
+	.event_block__prew
+		position: relative
+		background-color: white
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4)
+		z-index: 1
+		margin-bottom: 1em
+		margin-top: 1em
+	.flex-column__event
+		width: 350px
+		.event_block__prew_info
+			padding: 1em 1em 0
+			
+			.category
+				position: absolute
+				background-color: $activeColor
+				color: white
+				font-weight: 600
+				padding: 5px 10px 5px 25px
+				top: 15px
+				left: -15px
+				
+				&:after
+					content: ''
+					display: block
+					background-color: $activeColor
+					width: 20px
+					height: 20px
+					position: absolute
+					transform: rotate(45deg)
+					bottom: -10px
+					z-index: -1
+					left: 5px
+			.label
+				background-color: rgba(68, 0, 40, 0.15)
+				padding: 3px
+				margin-right: 3px
+				font-weight: 600
+
+			p
+				margin-bottom: 1em
+				text-align: left
