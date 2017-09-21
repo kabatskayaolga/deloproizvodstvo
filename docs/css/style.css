@@ -550,10 +550,6 @@ ul {
       margin-right: 0; }
   .flex-wrapper .flex-wrapper {
     padding: 0; }
-  @media (min-width: 670px) {
-    .flex-wrapper > .flex-column__1-4:nth-child(2n) .flex-content-column {
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; } }
 
 h1 {
   font-size: 3.5em;
