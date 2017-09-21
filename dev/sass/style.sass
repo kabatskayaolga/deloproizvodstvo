@@ -50,18 +50,24 @@ ul
 		padding: 0 1em
 	&__center
 		align-items: center
+	@media (max-width: 1200px)
+		justify-content: center
 	.flex-column
 		
 		&__1-4
 			flex-grow: 1
-			flex-basis: 350px
+			flex-basis: 230px
 			width: 20%
-			@media (max-width: 1734px)
-				flex-basis: 550px
-			@media (max-width: 1330px)
-				flex-basis: 400px
-			@media (max-width: 998px)
-				flex-basis: 300px
+
+			@media (max-width: 1200px)
+				flex-basis: 350px
+				width: 10%
+				// flex-grow: 10
+				max-width: 350px
+			// @media (max-width: 1330px)
+			// 	flex-basis: 400px
+			// @media (max-width: 998px)
+			// 	flex-basis: 300px
 
 		&__1-2
 			flex-grow: 1
