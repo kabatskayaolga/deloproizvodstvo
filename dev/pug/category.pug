@@ -1,0 +1,140 @@
+extend includes/base
+block title
+	| title
+block vars
+	- var bodyClass = 'category'
+block content 
+	include includes/header
+	.wrapper.grey_section 	
+		.head_block_wrapp.head_home
+			.container
+				.head_block
+					h1 Делопроизводство
+
+					p Отсортируйте мероприятия по параметрам которые наиболее подходят именно вам! Наша компания занимается различными тематическими семинарами, тренингами, мы выдаем диплом об обучении который ценится
+			.container
+				.events_block__wrapper
+						.flex-wrapper__container.center__wrapper
+
+							form.flex-wrapper.form_wrapper.flex-wrapper__center.form_wrapper__selects
+								div.flex-column
+									select.form__select
+										option(value='Опция 1') Тематика
+										option(value='Опция 1') Опция 1
+								div.flex-column
+									select.form__select
+										option(value='Опция 1') Формат обучения
+										option(value='Опция 1') Опция 1
+								div.flex-column
+									select.form__select
+										option(value='Опция 1') Документ об обучении
+										option(value='Опция 1') Опция 1
+								div.flex-column
+									select.form__select
+										option(value='Опция 1') Дата
+										option(value='Опция 1') Опция 1
+								.flex-column
+									input.form__submit(type='submit' value='Искать')
+
+							.flex-wrapper.events_wrapper
+								-
+									var events = [
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										},
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										},
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										},
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										},
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										},
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										},
+										{
+											image: 'images/events/photo5251361654627739637.jpg',
+											category: 'Делопроизводство',
+											topic: '«Современное делопроизводство для секретаря-помощника руководителя и офис менеджера»',
+											
+											date: '28.08.2017',
+											days: '2 дня (16 часов)',
+											price: 'от 14990 руб/чел.'
+										}
+									]
+								each value in events 
+									.flex-column__event
+										.event_block__prew
+											div.event_block__prew_img
+												img(src= value.image)
+											div.event_block__prew_info
+												span.category= value.category
+												p
+													span.label Тема:
+													| #{value.topic}
+
+												p
+													span.label Дата:
+													| #{value.date}
+													br
+
+													span.label Длительность:
+													| #{value.days}
+													br
+
+													span.label Цена:
+													| #{value.price}
+												.center__wrapper
+													a.button(href='#') Подробнее
+							
+							.center__wrapper
+								.navigation_buttons
+									a.button(href='#') <<
+									a.button(href='#') 1
+									a.button(href='#').active 2
+									a.button(href='#') 3
+									a.button(href='#') >>
+
+		
+	include includes/footer

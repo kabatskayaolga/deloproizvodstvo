@@ -22,8 +22,17 @@
 			color: $activeColor
 			font-size: 1em
 			font-family: 'Tinos', serif
+			@media (max-width: 1700px)
+				min-width: 270px
+			@media (max-width: 1600px)
+				min-width: 250px
+			@media (max-width: 1500px)
+				min-width: 230px
+			@media (max-width: 1400px)
+				min-width: 200px
 			@media (max-width: 400px)
 				min-width: 250px
+				
 
 		&__submit
 			border: 2px solid $activeColor

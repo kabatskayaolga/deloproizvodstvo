@@ -1,7 +1,7 @@
 footer.footer
 	.footer_container.container
 		.flex-wrapper
-			.flex-column__1-4
+			.flex-column
 				-
 					var 
 						header_logo__title = 'Профи Карьера',
@@ -45,7 +45,7 @@ footer.footer
 					each value in footer_nav_link
 						a(href= value.href)= value.title	
 
-			.flex-column__1-4
+			.flex-column
 				.footer_nav__menu
 					each value in header_nav_link
 						if value.sub_nav__menu
@@ -60,7 +60,7 @@ footer.footer
 							i(class= 'icon-'+ value.name)
 
 
-			.flex-column__1-4
+			.flex-column
 				-
 					var
 						footer_contacts = [
@@ -86,7 +86,7 @@ footer.footer
 				p с пн по пт с 9:00-18:00. 
 
 
-			.flex-column__1-4
+			.flex-column
 				h3 Поиск по сайту
 				.footer_search.search_form
 					input(type='text' placeholder='Найдите то, что вас интересует').search_form__input

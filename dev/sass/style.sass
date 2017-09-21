@@ -6,7 +6,7 @@
 
 
 $activeColor: #440028
-$greyColor: #e6e4e4
+$greyColor: #f0f0f0
 
 *
 	margin: 0
@@ -54,8 +54,15 @@ ul
 		
 		&__1-4
 			flex-grow: 1
-			flex-basis: 280px
+			flex-basis: 350px
 			width: 20%
+			@media (max-width: 1734px)
+				flex-basis: 550px
+			@media (max-width: 1330px)
+				flex-basis: 400px
+			@media (max-width: 998px)
+				flex-basis: 300px
+
 		&__1-2
 			flex-grow: 1
 			flex-basis: 300px
@@ -90,7 +97,7 @@ ul
 
 
 h1
-	font-size: 4em
+	font-size: 3.5em
 	text-transform: uppercase
 	word-wrap: break-word
 	overflow-wrap: break-word
@@ -181,7 +188,8 @@ a.button
 	background-size: 120%
 	background-position: top center
 	@media (max-width: 1425px)
-		background-size: 200%
+		background-size: 150%
+		background-position: 30% top 
 		@media (max-width: 1200px)
 			background-size: 150%
 			background-position: top left
@@ -492,7 +500,7 @@ a.button
 		margin-bottom: 1em
 		margin-top: 1em
 	.flex-column__event
-		width: 350px
+		width: 330px
 		.event_block__prew_info
 			padding: 1em 1em 0
 			
