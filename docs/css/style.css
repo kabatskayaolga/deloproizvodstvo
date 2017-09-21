@@ -731,10 +731,12 @@ a.button {
   z-index: 100; }
   .header .container {
     padding: 10px 0 10px; }
-
-@media (max-width: 1200px) {
-  .header_logo {
-    width: 250px; } }
+  @media (max-width: 1200px) {
+    .header .header_logo {
+      width: 250px;
+      margin-right: 0; } }
+  .header .header_contacts {
+    margin-right: 0; }
 
 .header_contact {
   margin-right: 20px; }
