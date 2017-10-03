@@ -313,7 +313,7 @@ a.button
 
 .home
 	.head_block_wrapp
-		margin-bottom: 20em
+		margin-bottom: 15em
 		background-image: url(../images/back.jpg)
 		.head_block
 			margin-top: 100px
@@ -322,13 +322,13 @@ a.button
 
 
 		.head-directions
-			margin: 2em 0 -20em
+			margin: 2em 0 -15em
 			text-align: center
 			&__item
 				background-color: white
 				box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4)
 				margin-bottom: 1em
-				padding: 2em
+				padding: 2em 1em 1.5em
 				transition: color 0s
 				[class^="icon-"], [class*=" icon-"]
 					color: $activeColor
@@ -416,7 +416,9 @@ a.button
 				@media (max-width: 900px) and (min-width: 840px)	 
 					.image_wrapper
 						box-shadow: 0.6em 0.6em 0 0.6em $activeColor
-			@media (max-width: 700px)
+					.hidden_block
+						display: block
+			@media (max-width: 840px)
 				.image_wrapper
 						box-shadow: 0.5em 0.5em 0 0.5em $activeColor
 	.slick-arrow
@@ -458,9 +460,18 @@ a.button
 		@media (max-width: 1130px)
 			width: 280px
 			height: 280px
-		@media (max-width: 1000px)
+		@media (max-width: 1090px)
 			width: 230px
 			height: 230px
+		@media (max-width: 930px)
+			width: 200px
+			height: 200px
+		@media (max-width: 840px)
+			width: 280px
+			height: 280px
+		@media (max-width: 560px)
+			width: 220px
+			height: 220px
 	.specialty
 		background-color: $activeColor
 		color: white

@@ -741,6 +741,10 @@ a.button {
     .header .header_logo {
       width: 250px;
       margin-right: 0; } }
+  @media (max-width: 1200px) {
+    .header .flex-wrapper {
+      -ms-flex-pack: justify;
+          justify-content: space-between; } }
   .header .header_contacts {
     margin-right: 0; }
 
@@ -942,10 +946,13 @@ a.button {
     border: none;
     background-color: transparent;
     border-bottom: 2px solid #440028;
-    min-width: 300px;
     width: 100%;
     padding: 5px;
     color: white; }
+    @media (min-width: 863px) {
+      .search_form__input,
+      .mail_form__input {
+        min-width: 300px; } }
   .search_form__submit,
   .mail_form__submit {
     position: absolute;
@@ -988,6 +995,12 @@ a.button {
     margin-bottom: 0.3em; }
   .footer .footer_logo {
     margin-bottom: 1em; }
+    @media (max-width: 1450px) {
+      .footer .footer_logo {
+        max-width: 250px; } }
+    @media (max-width: 1370px) {
+      .footer .footer_logo {
+        max-width: 200px; } }
   .footer .footer_nav__menu a, .footer .footer_contacts a {
     display: block; }
   .footer .footer_nav__menu .footer_contact, .footer .footer_contacts .footer_contact {
@@ -996,9 +1009,36 @@ a.button {
     .footer .flex-wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between; } }
+  @media (max-width: 680px) {
+    .footer .flex-wrapper {
+      -ms-flex-pack: center;
+          justify-content: center; } }
+  @media (max-width: 946px) {
+    .footer .flex-wrapper .flex-column {
+      -ms-flex-preferred-size: 350px;
+          flex-basis: 350px; } }
+  @media (max-width: 863px) {
+    .footer .flex-wrapper .flex-column {
+      -ms-flex-preferred-size: 300px;
+          flex-basis: 300px; } }
+  @media (max-width: 740px) {
+    .footer .flex-wrapper .flex-column {
+      -ms-flex-preferred-size: 250px;
+          flex-basis: 250px; } }
 
 .footer_forms h3 {
   margin: 0; }
+
+.footer_forms .footer_form {
+  margin-bottom: 1.5em; }
+
+@media (max-width: 1317px) and (min-width: 946px) {
+  .footer_forms .footer_search {
+    display: none; } }
+
+@media (max-width: 946px) {
+  .footer_forms .footer_search {
+    margin-top: 1em; } }
 
 .white-popup-block {
   background: #FFF;
@@ -1130,20 +1170,20 @@ a.button {
   padding: 1em 1em; }
 
 .home .head_block_wrapp {
-  margin-bottom: 20em;
+  margin-bottom: 15em;
   background-image: url(../images/back.jpg); }
   .home .head_block_wrapp .head_block {
     margin-top: 100px;
     text-align: center;
     max-width: 900px; }
   .home .head_block_wrapp .head-directions {
-    margin: 2em 0 -20em;
+    margin: 2em 0 -15em;
     text-align: center; }
     .home .head_block_wrapp .head-directions__item {
       background-color: white;
       box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4);
       margin-bottom: 1em;
-      padding: 2em;
+      padding: 2em 1em 1.5em;
       transition: color 0s; }
       .home .head_block_wrapp .head-directions__item [class^="icon-"], .home .head_block_wrapp .head-directions__item [class*=" icon-"] {
         color: #440028; }
@@ -1210,8 +1250,10 @@ a.button {
       display: block; } }
   @media (max-width: 900px) and (min-width: 840px) {
     .lecturers_slider .slick-slide.slick-current + .slick-slide .image_wrapper {
-      box-shadow: 0.6em 0.6em 0 0.6em #440028; } }
-  @media (max-width: 700px) {
+      box-shadow: 0.6em 0.6em 0 0.6em #440028; }
+    .lecturers_slider .slick-slide.slick-current + .slick-slide .hidden_block {
+      display: block; } }
+  @media (max-width: 840px) {
     .lecturers_slider .slick-slide.slick-current .image_wrapper {
       box-shadow: 0.5em 0.5em 0 0.5em #440028; } }
   .lecturers_slider .slick-arrow {
@@ -1264,10 +1306,22 @@ a.button {
       .lecturers_slider .image_wrapper {
         width: 280px;
         height: 280px; } }
-    @media (max-width: 1000px) {
+    @media (max-width: 1090px) {
       .lecturers_slider .image_wrapper {
         width: 230px;
         height: 230px; } }
+    @media (max-width: 930px) {
+      .lecturers_slider .image_wrapper {
+        width: 200px;
+        height: 200px; } }
+    @media (max-width: 840px) {
+      .lecturers_slider .image_wrapper {
+        width: 280px;
+        height: 280px; } }
+    @media (max-width: 560px) {
+      .lecturers_slider .image_wrapper {
+        width: 220px;
+        height: 220px; } }
   .lecturers_slider .specialty {
     background-color: #440028;
     color: white;

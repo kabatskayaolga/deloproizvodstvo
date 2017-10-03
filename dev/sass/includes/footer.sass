@@ -9,6 +9,10 @@
 		margin-bottom: 0.3em
 	.footer_logo
 		margin-bottom: 1em
+		@media (max-width: 1450px)
+			max-width: 250px 
+		@media (max-width: 1370px)
+			max-width: 200px 
 	.footer_nav__menu, .footer_contacts
 		a
 			display: block
@@ -16,10 +20,29 @@
 			margin-bottom: 0.5em
 	.flex-wrapper
 		@media (max-width: 1200px)
-				justify-content: space-between
+			justify-content: space-between
+		@media (max-width: 680px)
+			justify-content: center
+		
+		.flex-column
+			@media (max-width: 946px)
+				flex-basis: 350px
+			@media (max-width: 863px)
+				flex-basis: 300px
+			@media (max-width: 740px)
+				flex-basis: 250px
+
+
 .footer_forms
 	h3
 		margin: 0
+	.footer_form
+		margin-bottom: 1.5em
+	.footer_search
+		@media (max-width: 1317px) and (min-width: 946px)
+			display: none
+		@media (max-width: 946px)
+			margin-top: 1em
 .white-popup-block
 	background: #FFF
 	padding: 20px 30px

@@ -48,14 +48,14 @@ jQuery(document).ready(function($){
 		        slidesToShow: 3,
 		      }
 		    },
+		    // {
+		    //   breakpoint: 840,
+		    //   settings: {
+		    //     slidesToShow: 2,
+		    //   }
+		    // },
 		    {
 		      breakpoint: 840,
-		      settings: {
-		        slidesToShow: 2,
-		      }
-		    },
-		    {
-		      breakpoint: 700,
 		      settings: {
 		        slidesToShow: 1,
 		        slidesToScroll: 1
