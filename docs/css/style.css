@@ -515,8 +515,6 @@ ul {
   .flex-wrapper .flex-column__1-4 {
     -ms-flex-positive: 1;
         flex-grow: 1;
-    -ms-flex-preferred-size: 230px;
-        flex-basis: 230px;
     width: 20%; }
     @media (max-width: 1200px) {
       .flex-wrapper .flex-column__1-4 {
@@ -547,7 +545,8 @@ ul {
         flex-direction: column;
     width: 100%; }
     .flex-wrapper.flex-content-column > div {
-      margin-right: 0; }
+      margin-right: 0;
+      width: 100%; }
   .flex-wrapper .flex-wrapper {
     padding: 0; }
 
@@ -1336,7 +1335,8 @@ a.button {
   .lessons_block_wrapp .lessons_slider .slick-slide {
     padding: 0; }
   .lessons_block_wrapp .lessons_slider img {
-    width: 100%; }
+    width: auto;
+    max-height: 300px; }
 
 .lessons_block_wrapp p {
   margin-bottom: 1em; }

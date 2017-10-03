@@ -71,7 +71,8 @@ jQuery(document).ready(function($){
 		speed: 300,
 		dots: true,
 		arrows: false,
-		// slidesToShow: 1,		
+		slidesToShow: 1,
+		adaptiveHeight: true		
 	}).magnificPopup({
 		delegate: 'a',
 		type: 'image',

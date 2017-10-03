@@ -56,8 +56,9 @@ ul
 		
 		&__1-4
 			flex-grow: 1
-			flex-basis: 230px
+			// flex-basis: 230px
 			width: 20%
+			// -ms-flex-basis: initial
 
 			@media (max-width: 1200px)
 				flex-basis: 350px
@@ -87,6 +88,7 @@ ul
 		width: 100%
 		&>div
 			margin-right: 0
+			width: 100%
 	.flex-wrapper
 		padding: 0
 	// & > .flex-column__1-4
@@ -224,6 +226,7 @@ a.button
 	
 	.slick-slide
 		padding: 0 1em
+		// max-width: 500px
 	.slick-arrow
 		position: absolute
 		top: 50%
@@ -490,9 +493,11 @@ a.button
 			padding: 0
 
 		img
-			width: 100%
+			width: auto
+			max-height: 300px
 	p
 		margin-bottom: 1em
+	.flex-column__1-4
 
 
 
