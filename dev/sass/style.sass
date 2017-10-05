@@ -53,7 +53,12 @@ ul
 	@media (max-width: 1200px)
 		justify-content: center
 	.flex-column
-		
+		&__1-5
+			flex-grow: 1
+			flex-basis: 230px
+			// width: 20%
+			// -ms-flex-basis: initial
+
 		&__1-4
 			flex-grow: 1
 			// flex-basis: 230px
@@ -150,8 +155,8 @@ h3
 		font-size: 1.1em
 
 h4
-	font-size: 1.2em
-	line-height: 1
+	font-size: 1.1em
+	line-height: 1.2
 	margin: 1em 0
 a
 	color: black
@@ -235,7 +240,7 @@ a.button
 		width: 60px
 		left: -30px
 		height: 60px
-		background-color: initial
+		background-color: transparent
 		border: none
 		z-index: 10
 		cursor: pointer
@@ -252,17 +257,17 @@ a.button
 				width: 30px
 		&:before
 			@media (max-width: 700px)
-				transform: rotate(45deg) translateX(-6px) translateY(20px) 
-			transform: rotate(45deg) translateX(-15px) translateY(34px) 
+				transform: rotate(45deg) translate(-6px,20px) 
+			transform: rotate(45deg) translate(-15px,34px) 
 			
 		&:after	
 			@media (max-width: 700px)
-				transform: rotate(-45deg) translateX(-6px) translateY(-20px)
-			transform: rotate(-45deg) translateX(-15px) translateY(-34px)
+				transform: rotate(-45deg) translate(-6px,-20px)
+			transform: rotate(-45deg) translate(-15px,-34px)
 			
 		&.slick-next
 			right: -30px
-			left: initial
+			left: auto
 			transform: rotate(180deg) translateY(50%)
 			@media (max-width: 700px)
 				right: -15px
@@ -523,8 +528,14 @@ a.button
 		z-index: 1
 		margin-bottom: 1em
 		margin-top: 1em
+	.flex-wrapper
+		justify-content: flex-start
+
 	.flex-column__event
-		width: 330px
+		// width: 330px
+		flex-basis: 330px
+		flex-grow: 1
+		max-width: 330px
 		.event_block__prew_info
 			padding: 1em 1em 0
 			

@@ -149,7 +149,7 @@ jQuery(document).ready(function($){
 	});
 
 
-	$('.partners_slider').slick({
+	$('.partners_slider, .client_slider').slick({
 		infinite: true,
 		speed: 300,
 		dots: false,

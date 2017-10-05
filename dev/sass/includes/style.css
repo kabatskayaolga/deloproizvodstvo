@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?g8scn2');
-  src:  url('../fonts/icomoon.eot?g8scn2#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?g8scn2') format('truetype'),
-    url('../fonts/icomoon.woff?g8scn2') format('woff'),
-    url('../fonts/icomoon.svg?g8scn2#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?cuopji');
+  src:  url('../fonts/icomoon.eot?cuopji#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?cuopji') format('truetype'),
+    url('../fonts/icomoon.woff?cuopji') format('woff'),
+    url('../fonts/icomoon.svg?cuopji#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,79 +23,81 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-facebook:before {
+.icon-student:before {
   content: "\e900";
 }
-.icon-google:before {
+.icon-teacher:before {
   content: "\e901";
 }
-.icon-instagram:before {
+.icon-teacher2:before {
   content: "\e902";
 }
-.icon-mail:before {
+.icon-facebook:before {
   content: "\e903";
 }
-.icon-phone:before {
+.icon-google:before {
   content: "\e904";
 }
-.icon-search:before {
+.icon-instagram:before {
   content: "\e905";
 }
-.icon-slideshare:before {
+.icon-mail:before {
   content: "\e906";
 }
-.icon-twitter:before {
+.icon-phone:before {
   content: "\e907";
 }
-.icon-vk:before {
+.icon-search:before {
   content: "\e908";
 }
-.icon-youtube:before {
+.icon-slideshare:before {
   content: "\e909";
 }
-.icon-menu:before {
-  content: "\e90e";
-}
-
-
-
-
-.icon-archive:before {
+.icon-twitter:before {
   content: "\e90a";
 }
-.icon-communication:before {
+.icon-vk:before {
   content: "\e90b";
 }
-.icon-folder:before {
+.icon-youtube:before {
   content: "\e90c";
 }
-.icon-student:before {
+.icon-archive:before {
   content: "\e90d";
 }
-
-
-.icon-conversation:before {
-  content: "\e916";
+.icon-communication:before {
+  content: "\e90e";
 }
-.icon-moscow:before {
-  content: "\e915";
+.icon-folder:before {
+  content: "\e90f";
 }
-.icon-tea:before {
-  content: "\e914";
-}
-.icon-keyboard:before {
-  content: "\e913";
-}
-.icon-cup:before {
-  content: "\e912";
-}
-.icon-wifi:before {
-  content: "\e911";
-}
-.icon-email:before {
+.icon-student2:before {
   content: "\e910";
 }
+.icon-menu:before {
+  content: "\e911";
+}
 .icon-loc:before {
-  content: "\e90f";
+  content: "\e912";
+}
+.icon-email:before {
+  content: "\e913";
+}
+.icon-wifi:before {
+  content: "\e914";
+}
+.icon-cup:before {
+  content: "\e915";
+}
+.icon-keyboard:before {
+  content: "\e916";
+}
+.icon-tea:before {
+  content: "\e917";
+}
+.icon-moscow:before {
+  content: "\e918";
+}
+.icon-conversation:before {
+  content: "\e919";
 }

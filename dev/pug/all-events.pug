@@ -14,9 +14,9 @@ block content
 					p Отсортируйте мероприятия по параметрам которые наиболее подходят именно вам! Наша компания занимается различными тематическими семинарами, тренингами, мы выдаем диплом об обучении который ценится
 			.container
 				.events_block__wrapper
-						.flex-wrapper__container.center__wrapper
+						.flex-wrapper__container
 
-							form.flex-wrapper.form_wrapper.flex-wrapper__center.form_wrapper__selects
+							form.flex-wrapper.form_wrapper.flex-wrapper__center.center__wrapper.form_wrapper__selects
 								div.flex-column
 									select.form__select
 										option(value='Опция 1') Тематика
@@ -104,7 +104,7 @@ block content
 										}
 									]
 								each value in events 
-									.flex-column__event
+									.flex-column__event.flex-column__1-4
 										.event_block__prew
 											div.event_block__prew_img
 												img(src= value.image)
