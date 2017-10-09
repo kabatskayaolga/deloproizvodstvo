@@ -516,7 +516,14 @@ ul {
     -ms-flex-positive: 1;
         flex-grow: 1;
     -ms-flex-preferred-size: 230px;
-        flex-basis: 230px; }
+        flex-basis: 230px;
+    max-width: 230px; }
+    @media (max-width: 1458px) and (min-width: 900px) {
+      .flex-wrapper .flex-column__1-5 {
+        margin-right: 5em;
+        margin-left: 3em;
+        max-width: 230px;
+        margin-top: 1em; } }
   .flex-wrapper .flex-column__1-4 {
     -ms-flex-positive: 1;
         flex-grow: 1;
@@ -1208,6 +1215,9 @@ a.button {
         .home .head_block_wrapp .head-directions__item:hover a.button {
           color: #440028;
           background-color: white; }
+    @media (min-width: 1200px) {
+      .home .head_block_wrapp .head-directions h4 {
+        min-height: 2.4em; } }
 
 .about_slider {
   margin-top: 2em; }

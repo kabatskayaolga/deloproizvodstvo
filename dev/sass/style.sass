@@ -56,8 +56,15 @@ ul
 		&__1-5
 			flex-grow: 1
 			flex-basis: 230px
-			// width: 20%
-			// -ms-flex-basis: initial
+
+			max-width: 230px
+			@media (max-width: 1458px) and (min-width: 900px)
+				margin-right: 5em
+				margin-left: 3em
+				max-width: 230px
+				margin-top: 1em
+
+
 
 		&__1-4
 			flex-grow: 1
@@ -349,6 +356,10 @@ a.button
 					a.button
 						color: $activeColor
 						background-color: white
+			@media (min-width: 1200px)
+				h4
+					min-height: 2.4em
+
 
 
 .about_slider
