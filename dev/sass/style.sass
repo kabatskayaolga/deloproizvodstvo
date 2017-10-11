@@ -132,7 +132,7 @@ h1
 	word-wrap: break-word
 	overflow-wrap: break-word
 	line-height: 1
-	margin: 2em 0 0.5em
+	margin: 3em 0 0.5em
 	.label
 		font-size: 0.4em
 		display: inline-block
@@ -551,12 +551,17 @@ a.button
 		margin-top: 1em
 	.flex-wrapper
 		justify-content: flex-start
-
+	.form_wrapper
+		justify-content: space-between
+		@media (max-width: 1206px)
+			justify-content: center
+			.flex-wrapper
+				justify-content: center
 	.flex-column__event
 		// width: 330px
-		flex-basis: 330px
+		flex-basis: 250px
 		flex-grow: 1
-		max-width: 330px
+		max-width: 305px
 		.event_block__prew_info
 			padding: 1em 1em 0
 			

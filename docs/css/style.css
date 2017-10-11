@@ -581,7 +581,7 @@ h1 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1;
-  margin: 2em 0 0.5em; }
+  margin: 3em 0 0.5em; }
   h1 .label {
     font-size: 0.4em;
     display: inline-block;
@@ -933,8 +933,9 @@ a.button {
   border: none;
   background-color: transparent;
   border-bottom: 2px solid #440028;
-  min-width: 300px;
-  width: 100%;
+  min-width: 260px;
+  -ms-flex-preferred-size: 180px;
+      flex-basis: 180px;
   padding: 5px;
   color: #440028;
   font-size: 1em;
@@ -950,7 +951,7 @@ a.button {
       min-width: 230px; } }
   @media (max-width: 1400px) {
     .form_wrapper .form__input, .form_wrapper .form__select {
-      min-width: 200px; } }
+      min-width: 180px; } }
   @media (max-width: 400px) {
     .form_wrapper .form__input, .form_wrapper .form__select {
       min-width: 250px; } }
@@ -1399,12 +1400,23 @@ a.button {
   -ms-flex-pack: start;
       justify-content: flex-start; }
 
+.events_block__wrapper .form_wrapper {
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  @media (max-width: 1206px) {
+    .events_block__wrapper .form_wrapper {
+      -ms-flex-pack: center;
+          justify-content: center; }
+      .events_block__wrapper .form_wrapper .flex-wrapper {
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
 .events_block__wrapper .flex-column__event {
-  -ms-flex-preferred-size: 330px;
-      flex-basis: 330px;
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
   -ms-flex-positive: 1;
       flex-grow: 1;
-  max-width: 330px; }
+  max-width: 305px; }
   .events_block__wrapper .flex-column__event .event_block__prew_info {
     padding: 1em 1em 0; }
     .events_block__wrapper .flex-column__event .event_block__prew_info .category {
