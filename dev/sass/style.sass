@@ -104,7 +104,8 @@ ul
 			width: 20%
 	&>div
 		margin-right: 2em
-
+	&>.flex-wrapper
+		margin-right: -2em
 	&.flex-content-column
 		flex-direction: column
 		width: 100%
@@ -551,12 +552,15 @@ a.button
 		margin-top: 1em
 	.flex-wrapper
 		justify-content: flex-start
+		@media (max-width: 1006px)
+			justify-content: center
 	.form_wrapper
 		justify-content: space-between
 		@media (max-width: 1206px)
 			justify-content: center
 			.flex-wrapper
 				justify-content: center
+
 	.flex-column__event
 		// width: 330px
 		flex-basis: 250px
