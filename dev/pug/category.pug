@@ -8,33 +8,49 @@ block content
 	.wrapper.grey_section 	
 		.head_block_wrapp.head_home
 			.container
-				.head_block
-					h1 Делопроизводство
+				.flex-wrapper.wrapper__head_block
+					.head_block
+						h1 Делопроизводство
 
-					p Отсортируйте мероприятия по параметрам которые наиболее подходят именно вам! Наша компания занимается различными тематическими семинарами, тренингами, мы выдаем диплом об обучении который ценится
+						p Отсортируйте мероприятия по параметрам которые наиболее подходят именно вам! Наша компания занимается различными тематическими семинарами, тренингами, мы выдаем диплом об обучении который ценится
+						.form_header
+							h5 Заполните пожалуйста форму обратной связи и 
+								br
+								span.akcent мы подберем для Вас наиболее подходящее спецпредложение 
+								| по данном унаправлению!
+					.form-block
+						form.form_wrapper.form_wrapper_column
+							h4 Получить спецпредложение
+							input.form__input(type='text' placeholder='Ваше имя')
+							input.form__input(type='text' placeholder='Ваше имя')
+							input.form__input(type='text' placeholder='Ваше имя')
+							input.form__submit(type='submit' value='Отправить')
 			.container
 				.events_block__wrapper
-						.flex-wrapper__container.center__wrapper
+						.flex-wrapper__container
 
-							form.flex-wrapper.form_wrapper.flex-wrapper__center.form_wrapper__selects
-								div.flex-column
-									select.form__select
-										option(value='Опция 1') Тематика
-										option(value='Опция 1') Опция 1
-								div.flex-column
-									select.form__select
-										option(value='Опция 1') Формат обучения
-										option(value='Опция 1') Опция 1
-								div.flex-column
-									select.form__select
-										option(value='Опция 1') Документ об обучении
-										option(value='Опция 1') Опция 1
-								div.flex-column
-									select.form__select
-										option(value='Опция 1') Дата
-										option(value='Опция 1') Опция 1
-								.flex-column
-									input.form__submit(type='submit' value='Искать')
+							form
+								.flex-wrapper.form_wrapper.flex-wrapper__center.center__wrapper.form_wrapper__selects
+									div
+										div.flex-wrapper
+											div.flex-column
+												select.form__select
+													option(value='Опция 1') Тематика
+													option(value='Опция 1') Опция 1
+											div.flex-column
+												select.form__select
+													option(value='Опция 1') Формат обучения
+													option(value='Опция 1') Опция 1
+											div.flex-column
+												select.form__select
+													option(value='Опция 1') Документ об обучении
+													option(value='Опция 1') Опция 1
+											div.flex-column
+												select.form__select
+													option(value='Опция 1') Дата
+													option(value='Опция 1') Опция 1
+									.flex-column
+										input.form__submit(type='submit' value='Искать')
 
 							.flex-wrapper.events_wrapper
 								-
@@ -104,7 +120,7 @@ block content
 										}
 									]
 								each value in events 
-									.flex-column__event
+									.flex-column__event.flex-column__1-4
 										.event_block__prew
 											div.event_block__prew_img
 												img(src= value.image)

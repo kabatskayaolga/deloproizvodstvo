@@ -176,9 +176,23 @@ h4
 	font-size: 1.1em
 	line-height: 1.2
 	margin: 1em 0
+
+h5
+	font-size: 1.1em
+	line-height: 1.2
+	margin: 1em 0
+
 a
 	color: black
 	text-decoration: none
+
+
+span.akcent
+	background-color: $activeColor
+	color: white
+	padding: 7px 10px
+	font-size: 1.5em
+
 .icon_big
 	font-size: 4em
 
@@ -535,10 +549,121 @@ a.button
 	.wrapper
 	.head_block_wrapp
 		background-image: url(../images/back-category.jpg)
+		.flex-wrapper
+			&.wrapper__head_block
+				flex-wrap: nowrap
+				@media (max-width: 1020px)
+					display: initial
+
+				
+
+			& > .head_block
+				
+				@media (min-width: 1020px)
+					margin-top: 0
+
 		.head_block
 			margin-top: 100px
 			max-width: 900px
+			@media (max-width: 1020px)
+				text-align: center
+		.form-block	
+			// margin-top: 100px
+			text-align: center
+			align-self: flex-end
+			background-color: white
+			padding: 0 30px
+			max-width: 350px
+			margin: 0 auto
+			.form		
+				&__input
+					width: 100%
+			h4
+				background-color: $activeColor
+				color: white
+				margin: 0px -45px 10px -45px
+				padding: 10px 30px 20px
+				font-size: 2em
+				word-wrap: break-word
+				max-width: 400px
+				position: relative
+				line-height: 1
+				&:after,
+				&:before
+					content: ''
+					display: block
+					border: 7.5px solid transparent
+					border-top: 7.5px solid darken($activeColor, 30%)
+					border-right: 7.5px solid darken($activeColor, 30%)
+					width: 0
+					height: 0
+					left: 0px
+					bottom: -14px
+					position: absolute
+					z-index: 0
+				&:after
+					right: 0px
+					left: initial
+					border: 7.5px solid transparent
+					border-left: 7.5px solid darken($activeColor, 30%)
+					border-top: 7.5px solid darken($activeColor, 30%)
+		.form_header
+			text-align: center
+			padding: 0.3em 2em
+			margin-top: 1em
+			// border: 3px solid $activeColor
+			// border-radius: 200px
+			background-image: url(../images/elips.png)
+			background-repeat: no-repeat
+			background-position: center right
+			background-size: cover
+			max-width: 707px
+			position: relative
+			@media (max-width: 1325px)
+				padding: 1em 1em
+				max-width: 650px
+				margin-left: -95px
 
+			@media (max-width: 1076px)
+				max-width: 580px
+				padding: 1em 2em
+				margin-left: -75px
+			@media (max-width: 1020px)
+				max-width: 100%
+				margin-left: 0
+				background-position: bottom center
+				padding: 0.5em 2em
+				margin-bottom: 5em
+			@media (max-width: 680px)
+				padding: 2em 2em
+
+			@media (max-width: 611px)
+				padding: initial
+				background: initial
+			&:after
+				content: ''
+				display: table
+				width: 174px
+				height: 55px
+				background-image: url(../images/arrow.png)
+				position: absolute
+				background-size: contain
+				background-repeat: no-repeat
+				right: -170px
+				top: 30%
+				@media (max-width: 1325px)
+					width: 120px
+					right: -115px
+				@media (max-width: 1020px)
+					transform: rotate(50deg)
+					right: initial
+					bottom: -63px
+					top: initial
+					left: 30%
+
+
+			h5
+				line-height: 1.8
 	.flex-wrapper__container
 		background-color: rgba(68, 0, 40, 0.15)
 		
@@ -551,24 +676,23 @@ a.button
 		margin-bottom: 1em
 		margin-top: 1em
 	.flex-wrapper
-		justify-content: center
+		justify-content: flex-start
 		@media (max-width: 1006px)
 			justify-content: center
 	.form_wrapper
 		justify-content: space-between
-		@media (max-width: 1206px)
+		@media (max-width: 706px)
 			justify-content: center
 			.flex-wrapper
 				justify-content: center
-	.events_wrapper
 
+	.events_wrapper
+		
 	.flex-column__event
 		// width: 330px
-		flex-basis: 310px
+		flex-basis: 290px
 		flex-grow: 1
 		max-width: 390px
-		@media (max-width: 500px)
-			flex-basis: 290px
 		.event_block__prew
 			// width: 280px
 		.event_block__prew_info

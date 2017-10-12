@@ -1,4 +1,15 @@
+
 jQuery(document).ready(function($){
+	var mwi = $('.flex-column__event').css('max-width');
+
+	function mWidth(){
+		$('.flex-column__event').css('max-width' , mwi );
+
+		var wi = $('.flex-column__event').width();
+		$('.flex-column__event').css('max-width' , wi );
+	}
+
+
 	$('.nav_button__hidden').on('click', function(){
 		$(this).next().toggle();
 	});
@@ -178,5 +189,15 @@ jQuery(document).ready(function($){
 		  ]
 		// slidesToShow: 1,		
 	});
+
+	
+
+	mWidth();
+	
+
+	$( window ).resize(function() {
+	   mWidth();
+	});
 });
+
 
