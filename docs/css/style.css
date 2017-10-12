@@ -1398,8 +1398,11 @@ a.button {
 .lessons_block_wrapp p {
   margin-bottom: 1em; }
 
-.category .head_block_wrapp {
+.category.all-categories .head_block_wrapp {
   background-image: url(../images/back-category.jpg); }
+
+.category .head_block_wrapp {
+  background-image: url(../images/back-category-1.jpg); }
   .category .head_block_wrapp .flex-wrapper.wrapper__head_block {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
