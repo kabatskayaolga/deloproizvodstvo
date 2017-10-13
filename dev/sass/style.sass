@@ -751,6 +751,26 @@ a.button
 			align-self: center
 	h1
 		text-transform: initial
+	.dates
+		text-transform: uppercase
+		.current_date
+			color: black
+			font-size: 1.3em
+		.other_dates
+			position: relative
+			display: inline-block
+			margin-left: 20px
+			&:before
+				content: ''
+				display: block
+				width: 5px
+				height: 5px
+				border: 1px solid $activeColor
+				border-radius: 50%
+				position: absolute
+				bottom: 0.35em
+				left: -13px
+
 	.information_block_wrapp
 		.flex-wrapper
 			align-items: flex-start
@@ -759,26 +779,7 @@ a.button
 			@media (max-width: 1020px)
 				flex-wrap: wrap
 				justify-content: center
-		.dates
-			text-transform: uppercase
-			.current_date
-				color: black
-				font-size: 1.3em
-			.other_dates
-				position: relative
-				display: inline-block
-				margin-left: 20px
-				&:before
-					content: ''
-					display: block
-					width: 5px
-					height: 5px
-					border: 1px solid $activeColor
-					border-radius: 50%
-					position: absolute
-					bottom: 0.35em
-					left: -13px
-
+		
 		.main-information
 			background-color: #e6dfe3
 			padding: 5em 2em 0

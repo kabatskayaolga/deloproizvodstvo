@@ -1653,6 +1653,26 @@ a.button {
 .single h1 {
   text-transform: initial; }
 
+.single .dates {
+  text-transform: uppercase; }
+  .single .dates .current_date {
+    color: black;
+    font-size: 1.3em; }
+  .single .dates .other_dates {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px; }
+    .single .dates .other_dates:before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border: 1px solid #440028;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0.35em;
+      left: -13px; }
+
 .single .information_block_wrapp .flex-wrapper {
   -ms-flex-align: start;
       align-items: flex-start;
@@ -1666,26 +1686,6 @@ a.button {
           flex-wrap: wrap;
       -ms-flex-pack: center;
           justify-content: center; } }
-
-.single .information_block_wrapp .dates {
-  text-transform: uppercase; }
-  .single .information_block_wrapp .dates .current_date {
-    color: black;
-    font-size: 1.3em; }
-  .single .information_block_wrapp .dates .other_dates {
-    position: relative;
-    display: inline-block;
-    margin-left: 20px; }
-    .single .information_block_wrapp .dates .other_dates:before {
-      content: '';
-      display: block;
-      width: 5px;
-      height: 5px;
-      border: 1px solid #440028;
-      border-radius: 50%;
-      position: absolute;
-      bottom: 0.35em;
-      left: -13px; }
 
 .single .information_block_wrapp .main-information {
   background-color: #e6dfe3;
