@@ -46,7 +46,7 @@ jQuery(document).ready(function($){
 		
 	});
 
-	$('.lecturers_slider').slick({
+	$('.lecturers_slider_home').slick({
 		infinite: true,
 		speed: 300,
 		dots: true,
@@ -74,6 +74,38 @@ jQuery(document).ready(function($){
 		    }
 		 
 		  ]
+	});
+
+	$('.lecturers_slider__event').slick({
+		// infinite: true,
+		speed: 300,
+		dots: true,
+		// slidesToShow: 3,
+		centerMode: true,
+		variableWidth: true,
+		// adaptiveHeight: true,
+		// responsive: [
+		//     {
+		//       breakpoint: 1235,
+		//       settings: {
+		//         slidesToShow: 3,
+		//       }
+		//     },
+		//     // {
+		//     //   breakpoint: 840,
+		//     //   settings: {
+		//     //     slidesToShow: 2,
+		//     //   }
+		//     // },
+		//     {
+		//       breakpoint: 840,
+		//       settings: {
+		//         slidesToShow: 1,
+		//         slidesToScroll: 1
+		//       }
+		//     }
+		 
+		//   ]
 	});
 
 
@@ -197,6 +229,16 @@ jQuery(document).ready(function($){
 
 	$( window ).resize(function() {
 	   mWidth();
+	});
+
+
+	$('.tabs-links a').click(function(e){
+		e.preventDefault();
+		$('.tabs-links a, .tab_wrapper > div').removeClass('active');
+
+		var tabId = $(this).attr('href');
+		$(this).addClass('active');
+		$(tabId).addClass('active');
 	});
 });
 

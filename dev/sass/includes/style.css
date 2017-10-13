@@ -23,81 +23,108 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-student:before {
+.icon-perc:before {
   content: "\e900";
 }
-.icon-teacher:before {
+.icon-domain-registration:before {
   content: "\e901";
 }
-.icon-teacher2:before {
+.icon-percent:before {
   content: "\e902";
 }
-.icon-facebook:before {
+.icon-file:before {
   content: "\e903";
 }
-.icon-google:before {
-  content: "\e904";
-}
-.icon-instagram:before {
+.icon-notebook:before {
   content: "\e905";
 }
-.icon-mail:before {
+.icon-mortarboard:before {
   content: "\e906";
 }
-.icon-phone:before {
+.icon-list:before {
   content: "\e907";
 }
-.icon-search:before {
+.icon-team:before {
   content: "\e908";
 }
-.icon-slideshare:before {
+.icon-information:before {
+  content: "\e904";
+}
+.icon-student:before {
   content: "\e909";
 }
-.icon-twitter:before {
+.icon-teacher:before {
   content: "\e90a";
 }
-.icon-vk:before {
+.icon-teacher2:before {
   content: "\e90b";
 }
-.icon-youtube:before {
+.icon-facebook:before {
   content: "\e90c";
 }
-.icon-archive:before {
+.icon-google:before {
   content: "\e90d";
 }
-.icon-communication:before {
+.icon-instagram:before {
   content: "\e90e";
 }
-.icon-folder:before {
+.icon-mail:before {
   content: "\e90f";
 }
-.icon-student2:before {
+.icon-phone:before {
   content: "\e910";
 }
-.icon-menu:before {
+.icon-search:before {
   content: "\e911";
 }
-.icon-loc:before {
+.icon-slideshare:before {
   content: "\e912";
 }
-.icon-email:before {
+.icon-twitter:before {
   content: "\e913";
 }
-.icon-wifi:before {
+.icon-vk:before {
   content: "\e914";
 }
-.icon-cup:before {
+.icon-youtube:before {
   content: "\e915";
 }
-.icon-keyboard:before {
+.icon-archive:before {
   content: "\e916";
 }
-.icon-tea:before {
+.icon-communication:before {
   content: "\e917";
 }
-.icon-moscow:before {
+.icon-folder:before {
   content: "\e918";
 }
-.icon-conversation:before {
+.icon-student2:before {
   content: "\e919";
+}
+.icon-menu:before {
+  content: "\e91a";
+}
+.icon-loc:before {
+  content: "\e91b";
+}
+.icon-email:before {
+  content: "\e91c";
+}
+.icon-wifi:before {
+  content: "\e91d";
+}
+.icon-cup:before {
+  content: "\e91e";
+}
+.icon-keyboard:before {
+  content: "\e91f";
+}
+.icon-tea:before {
+  content: "\e920";
+}
+.icon-moscow:before {
+  content: "\e921";
+}
+.icon-conversation:before {
+  content: "\e922";
 }

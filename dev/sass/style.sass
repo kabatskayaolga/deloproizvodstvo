@@ -210,6 +210,8 @@ a.button
 		background-color: $activeColor
 		color: white
 		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2)
+	& + .button
+		margin: 0em 1em 1em
 
 .grey_section
 	background-color: $greyColor
@@ -547,7 +549,8 @@ a.button
 ////////////////////////////////
 
 
-.category
+.category, 
+.single
 	.wrapper
 	&.all-categories
 		.head_block_wrapp
@@ -581,6 +584,7 @@ a.button
 			padding: 0 30px
 			max-width: 350px
 			margin: 0 auto
+			opacity: 0.9
 			.form		
 				&__input
 					width: 100%
@@ -735,3 +739,201 @@ a.button
 			p
 				margin-bottom: 1em
 				text-align: left
+
+
+.single
+	.head_block_wrapp
+		background-image: url(../images/event.jpg)
+		background-size: cover
+		@media (min-width: 1200px)
+			padding: 4em 0
+		.form-block	
+			align-self: center
+	h1
+		text-transform: initial
+	.information_block_wrapp
+		.flex-wrapper
+			align-items: flex-start
+			flex-wrap: nowrap
+			justify-content: flex-start
+			@media (max-width: 1020px)
+				flex-wrap: wrap
+				justify-content: center
+		.dates
+			text-transform: uppercase
+			.current_date
+				color: black
+				font-size: 1.3em
+			.other_dates
+				position: relative
+				display: inline-block
+				margin-left: 20px
+				&:before
+					content: ''
+					display: block
+					width: 5px
+					height: 5px
+					border: 1px solid $activeColor
+					border-radius: 50%
+					position: absolute
+					bottom: 0.35em
+					left: -13px
+
+		.main-information
+			background-color: #e6dfe3
+			padding: 5em 2em 0
+			position: relative
+			max-width: 380px
+			min-width: 290px
+			@media (min-width: 1200px)
+				min-width: 370px
+			@media (max-width: 1020px)
+				max-width: 450px
+			margin-top: 4.5em
+			&:before
+				font-family: 'icomoon' !important
+				content: '\e904'
+				font-size: 4em
+				position: absolute
+				background-color: $activeColor
+				color: white
+				border: 5px solid #f0f0f0
+				width: 115px
+				height: 115px
+				text-align: center
+				border-radius: 50%
+				padding: 5px
+				box-sizing: border-box
+				top: -0.9em
+				left: 50%
+				transform: translateX(-50%)
+			& > div
+				margin-bottom: 0.5em
+			.item
+				font-weight: 600
+
+
+		.tab_wrapper
+			.tabs-links
+				a
+					background-color: white
+					padding: 0.5em 1em
+					display: inline-block
+					font-weight: 600
+					margin-right: 0.3em
+					@media (max-width: 670px)
+						display: block
+						margin-right: 0
+						border-bottom: 1px solid $activeColor
+						background-color: #f9f9f9
+					i
+						font-size: 1.7em
+						vertical-align: middle
+						margin-right: 0.2em
+						transition: 0s color
+					&.active
+						background-color: $activeColor
+						color: white
+
+			&>div
+				padding: 0.2em 2em 1em
+				background-color: white
+				margin-bottom: 1em
+				display: none
+				border-top: 5px solid $activeColor
+				&.active
+					display: block
+	.lecturers_block_wrapp
+		.slick-initialized .slick-slide
+			display: flex
+			align-items: center
+			@media (max-width: 808px)
+				display: block
+				text-align: center
+		.slick-slide
+			// max-width: 340px
+			&.slick-center
+				// max-width: 1000px
+				.image_wrapper
+					transform: scale(1)
+					@media (max-width: 1235px)
+						display: block
+				.hidden_block
+					display: block
+			.image_wrapper
+				width: 300px
+				height: 300px
+				@media (max-width: 1235px)
+					display: none
+				transform: scale(0.75) translateY(2%)
+				overflow: hidden
+				margin: 0 auto
+				border-radius: 50%
+				border: 2px solid $activeColor
+				img
+					min-width: 100%
+				@media (max-width: 1760px)
+					width: 280px
+					height: 280px
+				@media (max-width: 1685px)
+					width: 250px
+					height: 250px
+				@media (max-width: 1480px)
+					width: 220px
+					height: 220px
+				@media (max-width: 1310px)
+					width: 200px
+					height: 200px
+				@media (max-width: 1235px)
+					width: 320px
+					height: 320px
+				@media (max-width: 1130px)
+					width: 280px
+					height: 280px
+				@media (max-width: 1090px)
+					width: 230px
+					height: 230px
+				@media (max-width: 930px)
+					width: 200px
+					height: 200px
+				@media (max-width: 840px)
+					width: 280px
+					height: 280px
+				@media (max-width: 560px)
+					width: 220px
+					height: 220px
+			.hidden_block
+				display: none
+				max-width: 700px
+				@media (max-width: 1859px)
+					max-width: 600px
+				@media (max-width: 1600px)
+					max-width: 520px
+				@media (max-width: 1407px)
+					max-width: 450px
+				@media (max-width: 1267px)
+					max-width: 400px
+				@media (max-width: 1235px)
+					max-width: auto
+				margin-left: 20px
+			.specialty
+				background-color: $activeColor
+				color: white
+				font-weight: 600
+				padding: 0.3em 1em
+				border-radius: 15px
+				margin-top: 0.3em
+				display: inline-block
+
+		.slick-arrow
+			top: 150px
+			@media (max-width: 1660px)
+				top: 130px
+			@media (max-width: 1480px)
+				top: 110px
+			@media (max-width: 1235px)
+				top: 150px
+			@media (max-width: 1000px)
+				top: 110px
+			@media (max-width: 700px)
+				top: 150px

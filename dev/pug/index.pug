@@ -55,246 +55,246 @@ block content
 								p= value.p
 								a.button Выбрать курс
 					a.button Ознакомиться со всеми курсами
-	.aboutUs_block_wrapp
-		.container
-			.flex-wrapper.flex-wrapper__center
-				div.aboutUs_block.flex-column__1-3
-					h2 О нас
-					p Лицензированный учебный центр «Профи-Карьера» функционирует на рынке дополнительного образования более 15 лет. Программы центра одобрены Департаментом Образования г. Москвы и составлены в соответствии с действующими профессиональными стандартами. 
-					p Среди клиентов центра - ОАО «РЖД», Мосинжпроект, Газпромнефть, Лаборатория Гемотест, Посольство Канады, Роскосмос и другие. 
-				div.flex-column__2-3
-					.slider_block.about_slider
-						-
-							var
-								slider_documents = [
-									'images/documents/cert1-m.jpg',
-									'images/documents/cert2.jpg',
-									'images/documents/cert3.jpg',
-									'images/documents/cert1-m.jpg',
-									'images/documents/cert2.jpg',
-									'images/documents/cert3.jpg'
-								]
-						each value in slider_documents
-							a(href= value)
-								img(src= value)
-
-	
-	.specialOffer_block_wrapp.grey_section.center__wrapper
-		.container
-			h2 Получите спецпредложение по обучению Вашего персонала 
-			h3 Заполните,пожалуйста, форму обратной связи, и Вы получите персональную скидку на любой курс обучения в нашем центре. 
-			
-			form.form_wrapper
+		.aboutUs_block_wrapp
+			.container
 				.flex-wrapper.flex-wrapper__center
-					div.flex-column
-						input.form__input(type='text' placeholder='Ваше имя')
-					div.flex-column
-						input.form__input(type='text' placeholder='Ваше имя')
-					div.flex-column
-						input.form__input(type='text' placeholder='Ваше имя')
-				input.form__submit(type='submit' value='Отправить')
-	.advantages_block_wrapp.dark_section.center__wrapper
-		.container
-			h2 Наши преимущества
-			.flex-wrapper
-				-
-					var advantages = [
-						{
-							icon: 'moscow',
-							h4: 'Ваше обучение проходит в самом центре Москвы, в престижном историческом здании рядом с Кремлем '
-						},
-						{
-							icon: 'tea',
-							h4: 'Сытные кофе-паузы и комфортную обстановку отмечают все наши клиенты '
-						},
-						{
-							icon: 'teacher',
-							h4: 'Ваши преподаватели - лучшие эксперты страны в области управления документами, архивного и секретарского дела'
-						},
-						{
-							icon: 'conversation',
-							h4: 'Мини-группы дают Вам возможность получить ответы на Ваши вопросы и обменяться опытом с коллегами по обучению '
-						},
-						{
-							icon: 'student',
-							h4: 'Обучение можно пройти в любом удобном Вам формате: очно, дистанционно или индивидуально '
-						},
-						
-						
+					div.aboutUs_block.flex-column__1-3
+						h2 О нас
+						p Лицензированный учебный центр «Профи-Карьера» функционирует на рынке дополнительного образования более 15 лет. Программы центра одобрены Департаментом Образования г. Москвы и составлены в соответствии с действующими профессиональными стандартами. 
+						p Среди клиентов центра - ОАО «РЖД», Мосинжпроект, Газпромнефть, Лаборатория Гемотест, Посольство Канады, Роскосмос и другие. 
+					div.flex-column__2-3
+						.slider_block.about_slider
+							-
+								var
+									slider_documents = [
+										'images/documents/cert1-m.jpg',
+										'images/documents/cert2.jpg',
+										'images/documents/cert3.jpg',
+										'images/documents/cert1-m.jpg',
+										'images/documents/cert2.jpg',
+										'images/documents/cert3.jpg'
+									]
+							each value in slider_documents
+								a(href= value)
+									img(src= value)
 
-					]
-				each value in advantages
-					div.flex-column__1-5
-						i(class='icon-'+ value.icon).icon_big
-						h4= value.h4
-	
-
-	.lecturers_block_wrapp.center__wrapper
-		.container
-			h2 Тренеры и преподаватели
-			.lecturers_slider.slider_block
-				-
-					var lecturers = [
-						{
-							specialty: 'Тренер-практик',
-							name: 'Коновалов Сергей Владимирович',
-							photo: 'images/lecturers/20555c2.jpg',
-							about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
-						},
-						{
-							specialty: 'Бизнес-тренер - преподаватель',
-							name: 'Муталов Артур Сагадеевич',
-							photo: 'images/lecturers/16e8e67a.png',
-							about: 'Эксперт-практик  в области разработки бизнес-процессов и автоматизации систем управления информацией и поддержки управленческих решений.'
-						},
-						{
-							specialty: 'Бизнес-тренер, коуч',
-							name: 'Александр Петрищев',
-							photo: 'images/lecturers/595c0e1c.jpg',
-							about: 'Разработчик и методист. Автор более 30 программ по темам: ораторское искусство, мастерство общения, лидерские тренинги, взаимоотношения, конфликтология, командообразование, увеличение продаж, стрессоустойчивость, управленческие тренинги.'
-						},
-						{
-							specialty: 'Тренер-практик',
-							name: 'Cосновая Анна Владимировна',
-							photo: 'images/lecturers/6fbff1f.jpg',
-							about: 'Сертифицированный специалист в области стратегического менеджмента и Learning and knowledge management (управления знаниями) Эксперт-практик в области корпоративного и дистанционного обучения Методист и разработчик учебных модульных программ и учебно-методических комплексов и материалов в ЦДР «Профи-Карьера»'
-						},
-						{
-							specialty: 'Тренер-практик',
-							name: 'Терновой Николай',
-							photo: 'images/lecturers/29647d76.jpg',
-							about: 'Автор и разработчик обучающих программ, бизнес тренер'
-						},
-						{
-							specialty: 'Тренер-практик',
-							name: 'Григорьева Татьяна Олеговна',
-							photo: 'images/lecturers/5ecee2b.jpg',
-							about: 'Кандидат экономических наук, консультант по организационному развитию, генеральный директор "Профи-Карьера", сертифицированный тренер, специалист в области развития и обучения персонала'
-						},
-					
-					]
-				each value in lecturers
-					div
-						div.image_wrapper
-							img(src=value.photo)
-						.hidden_block
-							span.specialty= value.specialty
-							h3= value.name
-							p= value.about
-							a.button Задать вопрос лектору
-
-	.lessons_block_wrapp.grey_section
-		.container
-			.center__wrapper
-				h2 Где проходят занятия
-			.flex-wrapper.firs-flex
-				-
-					var lessons = [
-						{
-							folder: 'beige-hall',
-							images: ['IMG_264.jpg', 'IMG_2643.jpg', 'IMG_2650web.jpg', 'IMG_2659.jpg', 'IMG_2661-2web.jpg', 'IMG_6676.JPG', 'кофезона.jpg'],
-							text: '<strong>Залы оснащены</strong> самым современным оборудованием для комфортного обучения. </p><p><strong>Мы предоставляем</strong> сытные кофе-паузы'
-						},
-						{
-							folder: 'black-hall',
-							images: ['IMG_2686.jpg', 'IMG_2688.jpg', 'IMG_6640.JPG', 'IMG_6644.JPG', 'IMG_6648.JPG', 'IMG_6649.JPG'],
-							text: 'В перерывах доступен <strong>вай-фай</strong> </p>' +
-								'<p><strong>Оплата любым способом:</strong></p>' +
-								'<ul><li>безналичный расчет для юр.лиц,</li>' +
-								'<li>оплата через Интернет на счет юр.лица,</li>' +
-								'наличными на месте.'
-						},
-						{
-							folder: 'restaurant',
-							images: ['IMG_5109.JPG', 'IMG_5110.JPG', 'IMG_5113.JPG', 'IMG_5116.JPG', 'IMG_5117.JPG', 'IMG_5128.JPG'],
-							text: '<strong>Комплексные обеды в Балчуг-плаза</strong> (престижный офисный комплекс класса А+, где расположено российское отделение Google, Газпромбанк)'
-						},
-						{
-							folder: 'hotel',
-							images: ['XXL.jpeg', 'XXL-2.jpeg', 'XXL-3.jpeg'],
-							text: '<strong>Гостиница расположена в том же здании, где проходит обучение </strong>(гости столицы имеют возможность остановиться в гостинице в нашем же здании, можем помочь с размещением и бронированием)'
-						},
-					]
-				each value in lessons
-					.flex-column__1-4
-						.flex-wrapper.flex-content-column
-							div
-								.slider_block.lessons_slider
-									each val in value.images
-										a(href='images/'+value.folder+'/'+val)
-											image(src='images/'+value.folder+'/'+val)
-							div
-								p !{value.text}
-	.client_block_wrapp.center__wrapper
-		.container
-			h2 Наши Клиенты
-			.slider_block.client_slider
-				-
-					var
-						clients = [
-							'rosneft.jpg',
-							'teremok.jpg',
-							'ingosstrah.jpg',
+		
+		.specialOffer_block_wrapp.grey_section.center__wrapper
+			.container
+				h2 Получите спецпредложение по обучению Вашего персонала 
+				h3 Заполните,пожалуйста, форму обратной связи, и Вы получите персональную скидку на любой курс обучения в нашем центре. 
+				
+				form.form_wrapper
+					.flex-wrapper.flex-wrapper__center
+						div.flex-column
+							input.form__input(type='text' placeholder='Ваше имя')
+						div.flex-column
+							input.form__input(type='text' placeholder='Ваше имя')
+						div.flex-column
+							input.form__input(type='text' placeholder='Ваше имя')
+					input.form__submit(type='submit' value='Отправить')
+		.advantages_block_wrapp.dark_section.center__wrapper
+			.container
+				h2 Наши преимущества
+				.flex-wrapper
+					-
+						var advantages = [
+							{
+								icon: 'moscow',
+								h4: 'Ваше обучение проходит в самом центре Москвы, в престижном историческом здании рядом с Кремлем '
+							},
+							{
+								icon: 'tea',
+								h4: 'Сытные кофе-паузы и комфортную обстановку отмечают все наши клиенты '
+							},
+							{
+								icon: 'teacher',
+								h4: 'Ваши преподаватели - лучшие эксперты страны в области управления документами, архивного и секретарского дела'
+							},
+							{
+								icon: 'conversation',
+								h4: 'Мини-группы дают Вам возможность получить ответы на Ваши вопросы и обменяться опытом с коллегами по обучению '
+							},
+							{
+								icon: 'student',
+								h4: 'Обучение можно пройти в любом удобном Вам формате: очно, дистанционно или индивидуально '
+							},
 							
-							'sberbank.jpg',
-							'krasnoyarskayages.jpg',
-							'coca-cola-logo.jpg',
-							'logo-nizhfarm.jpg',
-							'valenta.jpg',
-							'rosatom.jpg',
-							'autovaz.png',
+							
+
 						]
-				each value in clients
-					a(href= 'images/clients/'+value)
-						img(src= 'images/clients/'+value)
-	.reviews_block_wrapp.dark_section.center__wrapper
-		.container
-			h2 Отзывы любимых клиентов
-			.slider_block.reviews_slider
-				-
-					var
-						slider_documents = [
-							'images/reviews/avk-delovaya-perepiska.jpg',
-							'images/reviews/fmba-sekretari.jpg',
-							'images/reviews/gazproektinzhiniring-delovaya-perepis.jpg',
-							'images/reviews/gazpromneft-sekretari.jpg',
-							'images/reviews/infokom-processnyy-podhod.jpg',
-							'images/reviews/kanada-etiket.jpg',
+					each value in advantages
+						div.flex-column__1-5
+							i(class='icon-'+ value.icon).icon_big
+							h4= value.h4
+		
 
-							'images/reviews/kazcink-iso-grigoreva.jpg',
-							'images/reviews/kosmicheskaya-svyaz-etiket.jpg',
-							'images/reviews/rostelekom.jpg',
-							'images/reviews/rostelekom-upravl-navyki.jpg',
-							'images/reviews/veb-lizing.jpeg'
+		.lecturers_block_wrapp.center__wrapper
+			.container
+				h2 Тренеры и преподаватели
+				.lecturers_slider.lecturers_slider_home.slider_block
+					-
+						var lecturers = [
+							{
+								specialty: 'Тренер-практик',
+								name: 'Коновалов Сергей Владимирович',
+								photo: 'images/lecturers/20555c2.jpg',
+								about: 'Прошел практические обучение: компания YOMO, под руководством, практикующего «бывшего» вице президента по операционной деятельности компании Тойота, более 12 месяцев.'
+							},
+							{
+								specialty: 'Бизнес-тренер - преподаватель',
+								name: 'Муталов Артур Сагадеевич',
+								photo: 'images/lecturers/16e8e67a.png',
+								about: 'Эксперт-практик  в области разработки бизнес-процессов и автоматизации систем управления информацией и поддержки управленческих решений.'
+							},
+							{
+								specialty: 'Бизнес-тренер, коуч',
+								name: 'Александр Петрищев',
+								photo: 'images/lecturers/595c0e1c.jpg',
+								about: 'Разработчик и методист. Автор более 30 программ по темам: ораторское искусство, мастерство общения, лидерские тренинги, взаимоотношения, конфликтология, командообразование, увеличение продаж, стрессоустойчивость, управленческие тренинги.'
+							},
+							{
+								specialty: 'Тренер-практик',
+								name: 'Cосновая Анна Владимировна',
+								photo: 'images/lecturers/6fbff1f.jpg',
+								about: 'Сертифицированный специалист в области стратегического менеджмента и Learning and knowledge management (управления знаниями) Эксперт-практик в области корпоративного и дистанционного обучения Методист и разработчик учебных модульных программ и учебно-методических комплексов и материалов в ЦДР «Профи-Карьера»'
+							},
+							{
+								specialty: 'Тренер-практик',
+								name: 'Терновой Николай',
+								photo: 'images/lecturers/29647d76.jpg',
+								about: 'Автор и разработчик обучающих программ, бизнес тренер'
+							},
+							{
+								specialty: 'Тренер-практик',
+								name: 'Григорьева Татьяна Олеговна',
+								photo: 'images/lecturers/5ecee2b.jpg',
+								about: 'Кандидат экономических наук, консультант по организационному развитию, генеральный директор "Профи-Карьера", сертифицированный тренер, специалист в области развития и обучения персонала'
+							},
+						
 						]
-				each value in slider_documents
-					a(href= value)
-						img(src= value)
+					each value in lecturers
+						div
+							div.image_wrapper
+								img(src=value.photo)
+							.hidden_block
+								span.specialty= value.specialty
+								h3= value.name
+								p= value.about
+								a.button Задать вопрос лектору
 
-
-
-	.partners_block_wrapp.center__wrapper
-		.container
-			h2 Наши партнеры
-			.slider_block.partners_slider
-				-
-					var
-						clients = [
-							'images/partners/alfabank.jpg',
-							'images/partners/autovaz.png',
-							'images/partners/gazprom.jpg',
-							'images/partners/irkenergo.jpg',
-							'images/partners/KES.jpg',
-							'images/partners/logo-aeroflot.jpg',
-
-							'images/partners/logo-nizhfarm.jpg',
-							'images/partners/lukoil.jpg',
-							'images/partners/mosgaz.jpg',
-							'images/partners/mosvodokanal.jpg',
-							'images/partners/ntv-logo.jpg'
+		.lessons_block_wrapp.grey_section
+			.container
+				.center__wrapper
+					h2 Где проходят занятия
+				.flex-wrapper.firs-flex
+					-
+						var lessons = [
+							{
+								folder: 'beige-hall',
+								images: ['IMG_264.jpg', 'IMG_2643.jpg', 'IMG_2650web.jpg', 'IMG_2659.jpg', 'IMG_2661-2web.jpg', 'IMG_6676.JPG', 'кофезона.jpg'],
+								text: '<strong>Залы оснащены</strong> самым современным оборудованием для комфортного обучения. </p><p><strong>Мы предоставляем</strong> сытные кофе-паузы'
+							},
+							{
+								folder: 'black-hall',
+								images: ['IMG_2686.jpg', 'IMG_2688.jpg', 'IMG_6640.JPG', 'IMG_6644.JPG', 'IMG_6648.JPG', 'IMG_6649.JPG'],
+								text: 'В перерывах доступен <strong>вай-фай</strong> </p>' +
+									'<p><strong>Оплата любым способом:</strong></p>' +
+									'<ul><li>безналичный расчет для юр.лиц,</li>' +
+									'<li>оплата через Интернет на счет юр.лица,</li>' +
+									'наличными на месте.'
+							},
+							{
+								folder: 'restaurant',
+								images: ['IMG_5109.JPG', 'IMG_5110.JPG', 'IMG_5113.JPG', 'IMG_5116.JPG', 'IMG_5117.JPG', 'IMG_5128.JPG'],
+								text: '<strong>Комплексные обеды в Балчуг-плаза</strong> (престижный офисный комплекс класса А+, где расположено российское отделение Google, Газпромбанк)'
+							},
+							{
+								folder: 'hotel',
+								images: ['XXL.jpeg', 'XXL-2.jpeg', 'XXL-3.jpeg'],
+								text: '<strong>Гостиница расположена в том же здании, где проходит обучение </strong>(гости столицы имеют возможность остановиться в гостинице в нашем же здании, можем помочь с размещением и бронированием)'
+							},
 						]
-				each value in clients
-					a(href= value)
-						img(src= value)
+					each value in lessons
+						.flex-column__1-4
+							.flex-wrapper.flex-content-column
+								div
+									.slider_block.lessons_slider
+										each val in value.images
+											a(href='images/'+value.folder+'/'+val)
+												image(src='images/'+value.folder+'/'+val)
+								div
+									p !{value.text}
+		.client_block_wrapp.center__wrapper
+			.container
+				h2 Наши Клиенты
+				.slider_block.client_slider
+					-
+						var
+							clients = [
+								'rosneft.jpg',
+								'teremok.jpg',
+								'ingosstrah.jpg',
+								
+								'sberbank.jpg',
+								'krasnoyarskayages.jpg',
+								'coca-cola-logo.jpg',
+								'logo-nizhfarm.jpg',
+								'valenta.jpg',
+								'rosatom.jpg',
+								'autovaz.png',
+							]
+					each value in clients
+						a(href= 'images/clients/'+value)
+							img(src= 'images/clients/'+value)
+		.reviews_block_wrapp.dark_section.center__wrapper
+			.container
+				h2 Отзывы любимых клиентов
+				.slider_block.reviews_slider
+					-
+						var
+							slider_documents = [
+								'images/reviews/avk-delovaya-perepiska.jpg',
+								'images/reviews/fmba-sekretari.jpg',
+								'images/reviews/gazproektinzhiniring-delovaya-perepis.jpg',
+								'images/reviews/gazpromneft-sekretari.jpg',
+								'images/reviews/infokom-processnyy-podhod.jpg',
+								'images/reviews/kanada-etiket.jpg',
+
+								'images/reviews/kazcink-iso-grigoreva.jpg',
+								'images/reviews/kosmicheskaya-svyaz-etiket.jpg',
+								'images/reviews/rostelekom.jpg',
+								'images/reviews/rostelekom-upravl-navyki.jpg',
+								'images/reviews/veb-lizing.jpeg'
+							]
+					each value in slider_documents
+						a(href= value)
+							img(src= value)
+
+
+
+		.partners_block_wrapp.center__wrapper
+			.container
+				h2 Наши партнеры
+				.slider_block.partners_slider
+					-
+						var
+							clients = [
+								'images/partners/alfabank.jpg',
+								'images/partners/autovaz.png',
+								'images/partners/gazprom.jpg',
+								'images/partners/irkenergo.jpg',
+								'images/partners/KES.jpg',
+								'images/partners/logo-aeroflot.jpg',
+
+								'images/partners/logo-nizhfarm.jpg',
+								'images/partners/lukoil.jpg',
+								'images/partners/mosgaz.jpg',
+								'images/partners/mosvodokanal.jpg',
+								'images/partners/ntv-logo.jpg'
+							]
+					each value in clients
+						a(href= value)
+							img(src= value)
 
 	include includes/footer
