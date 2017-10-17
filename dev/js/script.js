@@ -253,6 +253,28 @@ jQuery(document).ready(function($){
 		
 	});
 
+
+
+	 $( ".quantity_people__range" ).slider({
+      range: "max",
+      min: 1,
+      max: 11,
+      value: 2,
+      slide: function( event, ui ) {
+        $( ".quantity_people__size" ).val( ui.value );
+        // console.log($( '.quantity_people__size').val());
+        if(ui.value >= 2){
+        	if($('.quantity_people__sale').length > 0){
+        	} else{
+        		$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
+        	}
+	      } else{
+	      	$('.quantity_people__sale').remove();
+	      }
+        }
+	    });
+	    // $( ".quantity_people__size" ).val( $( ".quantity_people__range" ).slider( "value" ) );
+	    
 });
 
 

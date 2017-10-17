@@ -131,3 +131,6 @@
 .icon-expand:before {
   content: "\e923";
 }
+.icon-checked:before {
+  content: "\e924";
+}
