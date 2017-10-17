@@ -475,7 +475,7 @@ img {
   max-width: 100%;
   vertical-align: middle; }
 
-ul {
+ul, ol {
   padding-left: 20px; }
 
 .container {
@@ -642,6 +642,35 @@ h5 {
 a {
   color: black;
   text-decoration: none; }
+  a.more {
+    color: white;
+    padding: 0.3em 0.5em;
+    font-size: 16px;
+    border-radius: 0.2em;
+    background-color: #440028;
+    position: absolute;
+    top: 1em;
+    right: 1em; }
+    a.more:after {
+      content: "\e923";
+      font-size: 0.7em;
+      margin-left: 0.3em;
+      display: inline-block;
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      transition: 0.4s transform; }
+    a.more.up:after {
+      transform: rotate(180deg); }
+    @media (max-width: 400px) {
+      a.more {
+        position: initial;
+        display: inline-block;
+        margin: 1em auto 0; } }
 
 span.akcent {
   background-color: #440028;
@@ -804,6 +833,9 @@ a.button {
 
 .icon-conversation:before {
   content: "\e922"; }
+
+.icon-expand:before {
+  content: "\e923"; }
 
 .header {
   position: fixed;
@@ -1678,8 +1710,8 @@ a.button {
       align-items: flex-start;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -ms-flex-pack: start;
-      justify-content: flex-start; }
+  -ms-flex-pack: baseline;
+      justify-content: baseline; }
   @media (max-width: 1020px) {
     .single .information_block_wrapp .flex-wrapper {
       -ms-flex-wrap: wrap;
@@ -1721,6 +1753,20 @@ a.button {
     margin-bottom: 0.5em; }
   .single .information_block_wrapp .main-information .item {
     font-weight: 600; }
+
+.single .information_block_wrapp .more_information__wrapper {
+  -ms-flex-preferred-size: 2000px;
+      flex-basis: 2000px; }
+
+.single .information_block_wrapp #program {
+  position: relative; }
+  .single .information_block_wrapp #program ol > li {
+    font-weight: 600;
+    margin-top: 1em; }
+  .single .information_block_wrapp #program ul {
+    display: none; }
+    .single .information_block_wrapp #program ul > li {
+      font-weight: 400; }
 
 .single .information_block_wrapp .tab_wrapper .tabs-links a {
   background-color: white;

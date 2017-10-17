@@ -240,6 +240,19 @@ jQuery(document).ready(function($){
 		$(this).addClass('active');
 		$(tabId).addClass('active');
 	});
+	$('.more').click(function(e){
+		e.preventDefault();
+		$('#program ul').toggle();
+		if($('.more').html() == 'Подробнее'){
+			$('.more').html('Скрыть').addClass('up');
+			// $('.main-information').hide();
+		} else{
+			$('.more').html('Подробнее').removeClass('up');
+			// $('.main-information').show();
+		}
+		
+	});
+
 });
 
 

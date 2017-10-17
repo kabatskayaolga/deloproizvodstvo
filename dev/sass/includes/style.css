@@ -128,3 +128,6 @@
 .icon-conversation:before {
   content: "\e922";
 }
+.icon-expand:before {
+  content: "\e923";
+}
