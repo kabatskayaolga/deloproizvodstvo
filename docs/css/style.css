@@ -2152,7 +2152,9 @@ a.button {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
 
 .single .price_block_wrapp .calc_block {
   margin: 0;
@@ -2235,7 +2237,7 @@ a.button {
     margin: 0 -2em;
     padding: 1em 2em; }
   .single .price_block_wrapp .price_block .old_price__rub {
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 600;
     position: relative;
     line-height: 1; }
