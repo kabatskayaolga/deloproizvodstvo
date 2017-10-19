@@ -260,7 +260,7 @@ jQuery(document).ready(function($){
       range: 'max',
       min: 1,
       max: 11,
-      value: 1,
+      value: 2,
       slide: function( event, ui ) {
       	// console.log(event, ui);
       	
@@ -296,8 +296,11 @@ jQuery(document).ready(function($){
 
 	// var time1finish = moment($('#date1').val().slice(-10)).format('LL');
 
-
+$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
 });
+
+
+
 
 var oldPrice = parseInt($( ".old_price__rub").text());
 var numberPeople = 1;
@@ -347,19 +350,16 @@ function calc(elem){
 
 }
 
-
+// Выбранная дата по умолчанию
 var elActiveDate = '#date1';
-
-// var timefinish = moment($('#date1').val().slice(-10)).format('LL');
-
 
 function timeToSale(el){
 
+	// дата в виде строки
 	var ts = $(el).val().substring(6,10) + ' ' +
  		  $(el).val().substring(3,5) + ' ' +
  		  $(el).val().substring(0,2);
- 		  
-	var timestart = moment(ts, "YYYY MM DD").format('LL');
+ 	
 	var timeForSaleNoFormat = moment(ts, "YYYY MM DD").add(-1, 'months');
 	var timeForSale = moment(ts, "YYYY MM DD").add(-1, 'months').format('LL');
 	// moment().isBefore(timeForSale);
