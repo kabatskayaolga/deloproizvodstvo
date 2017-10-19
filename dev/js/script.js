@@ -297,6 +297,10 @@ jQuery(document).ready(function($){
 	// var time1finish = moment($('#date1').val().slice(-10)).format('LL');
 
 $(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
+if(+$('.num-days').text() >= 2){
+	$('[for="advanced_training"]').hide();
+}
+
 });
 
 
