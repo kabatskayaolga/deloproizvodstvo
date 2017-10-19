@@ -6,7 +6,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link rel="stylesheet" href="css/style.css?ver=0.02">
+    <link rel="stylesheet" href="css/style.css?ver=0.03">
     <link rel="icon" href="favicon.ico">
   </head>
   <body class="single">
@@ -66,7 +66,7 @@
         <div class="container">
           <div class="flex-wrapper">
             <div class="main-information">
-              <div> <span class="item">Длительность курса: </span>3 дня</div>
+              <div> <span class="item">Длительность курса: </span><span class="num-days">3 дня</span></div>
               <div><span class="item">Даты: </span><br>29.05-31.05.2017<br>27.06-29.06.2017<br>29.08-31.08.2017<br>
               </div>
               <div><span class="item">Место проведения: </span>Москва, м. Новокузнецкая, Садовническая ул., 5</div>
@@ -268,7 +268,7 @@
                 <h4>Количество участников:</h4>
                 <div class="flex-wrapper">
                   <div class="quantity_people">
-                    <input class="quantity_people__size" value="не выбрано" hidden name="quantity_people">
+                    <input class="quantity_people__size" hidden name="quantity_people">
                     <div class="quantity_people__sizevalue">
                       <div>1</div>
                       <div>2</div>
@@ -285,7 +285,7 @@
                     <div class="quantity_people__range"></div>
                   </div>
                   <div class="quantity_people_num">Больше? Выберите 
-                    <input class="form__input_number" type="number" min="12" value="12">
+                    <input class="form__input_number" type="number" min="12" value="12" name="quantity_people_more">
                   </div>
                 </div>
                 <h4>Дата проведения:</h4>
@@ -318,11 +318,11 @@
             <div class="price_block">
               <div class="old_price">
                 <div class="old_price__title">Базовая цена =</div>
-                <div class="old_price__rub">50 456 руб</div>
+                <div class="old_price__rub">10000 руб</div>
               </div>
               <div class="new_price">
-                <div class="new_price__title">Цена со скидкой =</div>
-                <div class="new_price__rub">40 456 руб</div>
+                <div class="new_price__title">Итоговая цена =</div>
+                <div class="new_price__rub">10000 руб</div>
               </div>
               <div class="price_block__items">
                 <h5>В стоимость входит:</h5>
@@ -376,6 +376,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js?ver=0.003"></script>
+    <script src="js/script.js?ver=0.004"></script>
   </body>
 </html>

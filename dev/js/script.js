@@ -256,13 +256,13 @@ jQuery(document).ready(function($){
 
 
 	 $( ".quantity_people__range" ).slider({
-      range: "max",
+      range: 'max',
       min: 1,
       max: 11,
-      value: 2,
+      value: 1,
       slide: function( event, ui ) {
-        $( ".quantity_people__size" ).val( ui.value );
-        // console.log($( '.quantity_people__size').val());
+      	// console.log(event, ui);
+      	
         if(ui.value >= 2){
         	if($('.quantity_people__sale').length > 0){
         	} else{
@@ -271,10 +271,65 @@ jQuery(document).ready(function($){
 	      } else{
 	      	$('.quantity_people__sale').remove();
 	      }
+	      $( ".quantity_people__size" ).val(ui.value);
+	      calc( ".quantity_people__size" );
         }
+         
 	    });
+	    // 
 	    // $( ".quantity_people__size" ).val( $( ".quantity_people__range" ).slider( "value" ) );
 	    
+
+	    $( ".calc_block input" ).change(function(){
+	    	 calc(this);
+	    	 
+	    	
+	    });
+
+
 });
 
+var oldPrice = parseInt($( ".old_price__rub").text());
+var newPrice = oldPrice;
 
+var numberPeople = 1;
+
+var oldWithQuantuty = 0;
+// var newWithPercent = parseInt($( ".old_price__rub").text());
+var percentWithQuantuty = (newPrice / 100) * 10;
+
+function calc(elem){
+
+	var counter = 0;
+
+	if($(elem).attr('name') == 'quantity_people' || 
+		$(elem).attr('name') == 'quantity_people_more'){
+		numberPeople = $(elem).val();
+
+	} else{
+		console.log('не забудь что нужно хранить дату')
+	}
+	// Цена учитывая количество людей
+	var priceWithNumberPeople = oldPrice * numberPeople;
+	// Цена учитывая количество людей + включены ли обеды или нет
+	var priceOfDinner = $('[name="dinner"]').prop( "checked" ) ? 500 * numberPeople : 0;
+	// Цена учитывая количество людей + Курс в формате повышения квалификации или нет
+	var priceOfAdvancedTraining = $('[name="advanced_training"]').prop( "checked" ) ? 3500 * numberPeople : 0;
+
+	counter = $('[name="payment"]').prop( "checked" ) & numberPeople > 1 ? 20 : 
+			  $('[name="payment"]').prop( "checked" ) & numberPeople == 1 ? 10 :
+			  $('[name="payment"]').prop( "checked" ) == false & numberPeople > 1 ? 10 : 0 ;
+
+	// Итоговая цена без скидки
+	var newPrice = priceWithNumberPeople + priceOfDinner + priceOfAdvancedTraining;
+
+	// Итоговая цена с учетом скидки
+	var newPriceWithQuantuty = newPrice - ((priceWithNumberPeople/100) * counter)
+
+	console.log(priceWithNumberPeople, priceOfDinner, priceOfAdvancedTraining, counter);
+
+	// Выводим новые цены
+	$( ".old_price__rub").text(newPrice + ' руб');
+	$( ".new_price__rub").text(newPriceWithQuantuty + ' руб');
+	
+}

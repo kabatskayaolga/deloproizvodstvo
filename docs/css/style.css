@@ -1913,7 +1913,12 @@ a.button {
         align-self: center; }
 
 .single h1 {
-  text-transform: initial; }
+  text-transform: initial;
+  margin-top: 2em; }
+
+.single .wrapper__head_block {
+  -ms-flex-align: center;
+      align-items: center; }
 
 .single .dates {
   text-transform: uppercase; }

@@ -156,7 +156,7 @@ block content
 						.main-information
 							div 
 								span.item Длительность курса: 
-								| #{value.main.days}
+								span.num-days #{value.main.days}
 							div
 								span.item Даты: 
 								br
@@ -313,7 +313,7 @@ block content
 							h4 Количество участников:
 							.flex-wrapper
 								.quantity_people
-									input.quantity_people__size(value='не выбрано', hidden, name='quantity_people')
+									input.quantity_people__size(hidden, name='quantity_people')
 									.quantity_people__sizevalue
 										div 1
 										div 2
@@ -330,7 +330,7 @@ block content
 									
 								.quantity_people_num
 									| Больше? Выберите 
-									input(type='number', min=12,  value="12").form__input_number
+									input(type='number', min=12,  value="12" name='quantity_people_more').form__input_number
 							h4 Дата проведения:
 							.flex-wrapper
 								div
@@ -366,10 +366,10 @@ block content
 					.price_block
 						.old_price
 							.old_price__title Базовая цена =
-							.old_price__rub 50 456 руб
+							.old_price__rub 10000 руб
 						.new_price
-							.new_price__title Цена со скидкой =
-							.new_price__rub 40 456 руб
+							.new_price__title Итоговая цена =
+							.new_price__rub 10000 руб
 
 						.price_block__items
 							h5 В стоимость входит:
