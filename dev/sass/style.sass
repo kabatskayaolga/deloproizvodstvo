@@ -992,14 +992,26 @@ a.button
 			justify-content: center
 			align-items: center
 			flex-wrap: nowrap
+			@media (max-width: 1053px)
+				flex-wrap: wrap
+		& > .container > .flex-wrapper
+			@media (max-width: 1053px)
+				&> div
+					width: 100%
 		.calc_block
 			margin: 0
 			padding: 2em
 			background-color: #ededed
+			@media (max-width: 1053px)
+				margin-right: 2em
 			.flex-wrapper
 				justify-content: space-between
+				flex-wrap: wrap
+				@media (max-width: 1053px)
+					justify-content: flex-start
 		.quantity_people
 			width: 300px
+			margin-bottom: 1em
 			.quantity_people__range
 				// width: 300px
 				background-color: $activeColor
@@ -1065,12 +1077,36 @@ a.button
 			padding: 1em 2em 2em
 			max-width: 300px
 			box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.2)
+			@media (max-width: 1053px)
+				display: flex
+				max-width: initial
+				padding: 0
+				box-shadow: none
+			@media (max-width: 575px)
+				flex-wrap: wrap
+
 			.old_price,
 			.new_price
 				text-align: center
-				border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1)
 				margin: 0 -2em
 				padding: 1em 2em
+				@media (max-width: 1053px)
+					border-bottom: none
+					border-right: 1px solid rgba(0, 0, 0, 0.1)
+					margin: 0
+					padding: 1em
+					display: flex
+					flex-flow: column
+					justify-content: center
+					color: white
+				@media (max-width: 575px)
+					width: 50%
+			@media (max-width: 1053px)
+				.old_price
+					background-color: $activeColor
+				.new_price
+					background-color: lighten($activeColor, 10%)
 			.old_price__rub
 				font-size: 2.2em
 				font-weight: 600
@@ -1086,6 +1122,9 @@ a.button
 					background-color: $activeColor
 					transform: rotate(-10deg)
 					top: 45%
+					@media (max-width: 1053px)
+						background-color: white
+						height: 2px
 			.new_price__title
 				font-weight: 600
 				// color: $activeColor
@@ -1095,27 +1134,32 @@ a.button
 				line-height: 1
 				// color: $activeColor
 			.old_price__title
-				background-color: lighten($activeColor, 15%)
-				color: white
-				margin: -2em -2.8em 1em -2.8em
-				padding: 0.5em
-				position: relative
-				&:before,
-				&:after
-					content: ''
-					display: block
-					border: 0.4em solid transparent
-					border-top: 0.4em solid darken($activeColor, 5%)
-					border-right: 0.4em solid darken($activeColor, 5%)
-					width: 0
-					height: 0
-					left: 0px
-					bottom: -0.8em
-					position: absolute
-					z-index: 0
-				&:after
-					right: 0px
-					left: initial
-					border: 0.4em solid transparent
-					border-left: 0.4em solid darken($activeColor, 5%)
-					border-top: 0.4em solid darken($activeColor, 5%)
+				@media (min-width: 1053px)
+					background-color: lighten($activeColor, 15%)
+					color: white
+					margin: -2em -2.8em 1em -2.8em
+					padding: 0.5em
+					position: relative
+					&:before,
+					&:after
+						content: ''
+						display: block
+						border: 0.4em solid transparent
+						border-top: 0.4em solid darken($activeColor, 5%)
+						border-right: 0.4em solid darken($activeColor, 5%)
+						width: 0
+						height: 0
+						left: 0px
+						bottom: -0.8em
+						position: absolute
+						z-index: 0
+					&:after
+						right: 0px
+						left: initial
+						border: 0.4em solid transparent
+						border-left: 0.4em solid darken($activeColor, 5%)
+						border-top: 0.4em solid darken($activeColor, 5%)
+			.price_block__items
+				@media (max-width: 1053px)
+					padding: 1em
+					margin-top: -1em

@@ -290,13 +290,7 @@ jQuery(document).ready(function($){
 });
 
 var oldPrice = parseInt($( ".old_price__rub").text());
-var newPrice = oldPrice;
-
 var numberPeople = 1;
-
-var oldWithQuantuty = 0;
-// var newWithPercent = parseInt($( ".old_price__rub").text());
-var percentWithQuantuty = (newPrice / 100) * 10;
 
 function calc(elem){
 
