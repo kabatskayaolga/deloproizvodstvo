@@ -307,78 +307,82 @@ block content
 			.container
 				.center__wrapper
 					h2 Расчет Вашей цены на обучение
-				.flex-wrapper
-					.calc_block
-						form.form_wrapper
-							h4 Количество участников:
-							.flex-wrapper
-								.quantity_people
-									input.quantity_people__size(hidden, name='quantity_people')
-									.quantity_people__sizevalue
-										div 1
-										div 2
-										div 3
-										div 4
-										div 5
-										div 6
-										div 7
-										div 8
-										div 9
-										div 10
-										div 11
-									.quantity_people__range
+				form.form_wrapper
+					.flex-wrapper
+						.calc_block
+							
+								h4 Количество участников:
+								.flex-wrapper
+									.quantity_people
+										input.quantity_people__size(hidden, name='quantity_people')
+										.quantity_people__sizevalue
+											div 1
+											div 2
+											div 3
+											div 4
+											div 5
+											div 6
+											div 7
+											div 8
+											div 9
+											div 10
+											div 11
+										.quantity_people__range
+										
+									.quantity_people_num
+										| Больше? Выберите 
+										input(type='number', min=1,  value="12" name='quantity_people_more').form__input_number
+								h4 Дата проведения:
+								.flex-wrapper
+									div
+										input(type='radio', id='date1', name='date' value='22.10.2017 - 25.10.2017' checked).form__input_radio
+										label.form__label_radio(for='date1') 22.10.2017 - 25.10.2017
+									div
+										input(type='radio', id='date2', name='date' value='26.11.2017 - 29.11.2017').form__input_radio
+										label.form__label_radio(for='date2') 26.11.2017 - 29.11.2017
+									div
+										input(type='radio', id='date3', name='date' value='02.12.2017 - 05.12.2017').form__input_radio
+										label.form__label_radio(for='date3') 02.12.2017 - 05.12.2017
+
+								input(type='checkbox', id='payment', name='payment' value='Скидка при ранней оплате +10%').form__input_checkbox
+								label.form__label_checkbox(for='payment') Оплата до 
+									span.time_for_sale 
+									span.akcent-color  (скидка 10% по предоплате)
+								
 									
-								.quantity_people_num
-									| Больше? Выберите 
-									input(type='number', min=12,  value="12" name='quantity_people_more').form__input_number
-							h4 Дата проведения:
-							.flex-wrapper
-								div
-									input(type='radio', id='date1', name='date' value='22-25 августа 2017' checked).form__input_radio
-									label.form__label_radio(for='date1') 22-25 августа 2017
-								div
-									input(type='radio', id='date2', name='date' value='22-25 августа 2017').form__input_radio
-									label.form__label_radio(for='date2') 22-25 августа 2017
-								div
-									input(type='radio', id='date3', name='date' value='22-25 августа 2017').form__input_radio
-									label.form__label_radio(for='date3') 22-25 августа 2017
+								h4 Дополнительно:
+								
+								input(type='checkbox', id='dinner', name='dinner' value='+500 руб/чел. за обед').form__input_checkbox
 
-							
-							input(type='checkbox', id='payment', name='payment' value='Скидка при ранней оплате +10%').form__input_checkbox
-							label.form__label_checkbox(for='payment') Оплата до 8 августа 
-								span.akcent-color (скидка 10%)
-							h4 Дополнительно:
-							
-							input(type='checkbox', id='dinner', name='dinner' value='+500 руб/чел. за обед').form__input_checkbox
-
-							label.form__label_checkbox(for='dinner') Хочу обеды! 
-								span.akcent-color + 500 руб. / обед
+								label.form__label_checkbox(for='dinner') Хочу обеды! 
+									span.akcent-color + 500 руб. / обед
 
 
-							input(type='checkbox', id='advanced_training', name='advanced_training' value=' формат повышения квалификации +3500 руб.').form__input_checkbox
+								input(type='checkbox', id='advanced_training', name='advanced_training' value=' формат повышения квалификации +3500 руб.').form__input_checkbox
 
-							label.form__label_checkbox(for='advanced_training') Курс в формате повышения квалификации
-								span.akcent-color + 3500 руб.
-								span.about_item По окончании курса вы получаете удостоверение о повышении квалификации
-							.center__wrapper
-								input.form__submit.form__submit__big(type='submit' value='Записаться на курс')
+								label.form__label_checkbox(for='advanced_training') Курс в формате повышения квалификации
+									span.akcent-color + 3500 руб.
+									span.about_item По окончании курса вы получаете удостоверение о повышении квалификации
+								
 
-					.price_block
-						.old_price
-							.old_price__title Базовая цена =
-							.old_price__rub 10000 руб
-						.new_price
-							.new_price__title Итоговая цена =
-							.new_price__rub 10000 руб
+						.price_block
+							.old_price
+								.old_price__title Базовая цена =
+								.old_price__rub 10000 руб
+							.new_price
+								.new_price__title Итоговая цена =
+								.new_price__rub 10000 руб
 
-						.price_block__items
-							h5 В стоимость входит:
-							ul
-								li Участие в курсе	
-								li Пакет участника: блокнот, ручка, рабочая тетрадь
-								li Именной сертификат участника
-								li Кофе-паузы в течение обучения
-								li Материалы и презентации курса в электронном виде
+							.price_block__items
+								h5 В стоимость входит:
+								ul
+									li Участие в курсе	
+									li Пакет участника: блокнот, ручка, рабочая тетрадь
+									li Именной сертификат участника
+									li Кофе-паузы в течение обучения
+									li Материалы и презентации курса в электронном виде
+								.center__wrapper
+									input.form__submit.form__submit__big(type='submit' value='Записаться на курс')
 
 
 	include includes/footer

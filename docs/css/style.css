@@ -1101,6 +1101,7 @@ a.button {
     text-align: center;
     left: 15%;
     top: 120%;
+    z-index: 2;
     padding: 0.5em;
     opacity: 0.9; }
     .form_wrapper .form__label_checkbox span.about_item:after {
@@ -2166,9 +2167,11 @@ a.button {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
 
-@media (max-width: 1053px) {
-  .single .price_block_wrapp > .container > .flex-wrapper > div {
-    width: 100%; } }
+.single .price_block_wrapp > .container > form > .flex-wrapper {
+  position: relative; }
+  @media (max-width: 1053px) {
+    .single .price_block_wrapp > .container > form > .flex-wrapper > div {
+      width: 100%; } }
 
 .single .price_block_wrapp .calc_block {
   margin: 0;
@@ -2177,6 +2180,9 @@ a.button {
   @media (max-width: 1053px) {
     .single .price_block_wrapp .calc_block {
       margin-right: 2em; } }
+  @media (min-width: 1053px) {
+    .single .price_block_wrapp .calc_block {
+      padding-bottom: 6em; } }
   .single .price_block_wrapp .calc_block .flex-wrapper {
     -ms-flex-pack: justify;
         justify-content: space-between;
@@ -2347,3 +2353,8 @@ a.button {
     .single .price_block_wrapp .price_block .price_block__items {
       padding: 1em;
       margin-top: -1em; } }
+  @media (min-width: 1053px) {
+    .single .price_block_wrapp .price_block .form__submit {
+      position: absolute;
+      bottom: 1em;
+      left: 33%; } }

@@ -1,5 +1,6 @@
 
 jQuery(document).ready(function($){
+
 	var mwi = $('.flex-column__event').css('max-width');
 
 	function mWidth(){
@@ -286,6 +287,15 @@ jQuery(document).ready(function($){
 	    	
 	    });
 
+	// var t1s = $('#date1').val().substring(6,10) + ' ' +
+	//  		  $('#date1').val().substring(3,5) + ' ' +
+	//  		  $('#date1').val().substring(0,2);
+	 		  
+	// var time1start = moment(t1s).format('LL');
+	// var timeForSale = moment(t1s).add(-1, 'months').format('LL');
+
+	// var time1finish = moment($('#date1').val().slice(-10)).format('LL');
+
 
 });
 
@@ -300,8 +310,12 @@ function calc(elem){
 		$(elem).attr('name') == 'quantity_people_more'){
 		numberPeople = $(elem).val();
 
-	} else{
-		console.log('не забудь что нужно хранить дату')
+	} if($(elem).attr('name') == 'date'){
+		timeToSale(elem);
+
+	} 
+	else{
+		// console.log('не забудь что нужно хранить дату')
 	}
 	// Цена учитывая количество людей
 	var priceWithNumberPeople = oldPrice * numberPeople;
@@ -320,10 +334,42 @@ function calc(elem){
 	// Итоговая цена с учетом скидки
 	var newPriceWithQuantuty = newPrice - ((priceWithNumberPeople/100) * counter)
 
-	console.log(priceWithNumberPeople, priceOfDinner, priceOfAdvancedTraining, counter);
+	// console.log(priceWithNumberPeople, priceOfDinner, priceOfAdvancedTraining, counter);
+
+
 
 	// Выводим новые цены
 	$( ".old_price__rub").text(newPrice + ' руб');
 	$( ".new_price__rub").text(newPriceWithQuantuty + ' руб');
 	
+
+
+
 }
+
+
+var elActiveDate = '#date1';
+
+// var timefinish = moment($('#date1').val().slice(-10)).format('LL');
+
+
+function timeToSale(el){
+
+	var ts = $(el).val().substring(6,10) + ' ' +
+ 		  $(el).val().substring(3,5) + ' ' +
+ 		  $(el).val().substring(0,2);
+ 		  
+	var timestart = moment(ts, "YYYY MM DD").format('LL');
+	var timeForSaleNoFormat = moment(ts, "YYYY MM DD").add(-1, 'months');
+	var timeForSale = moment(ts, "YYYY MM DD").add(-1, 'months').format('LL');
+	// moment().isBefore(timeForSale);
+	if(moment().isBefore(timeForSaleNoFormat)) {
+		$('[for="payment"').show();
+		$('.time_for_sale').text(timeForSale);
+
+	} else{
+		$('[for="payment"').hide();
+	}
+	
+}
+timeToSale(elActiveDate);

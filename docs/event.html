@@ -6,7 +6,7 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link rel="stylesheet" href="css/style.css?ver=0.05">
+    <link rel="stylesheet" href="css/style.css?ver=0.06">
     <link rel="icon" href="favicon.ico">
   </head>
   <body class="single">
@@ -262,9 +262,9 @@
           <div class="center__wrapper">
             <h2>Расчет Вашей цены на обучение</h2>
           </div>
-          <div class="flex-wrapper">
-            <div class="calc_block">
-              <form class="form_wrapper">
+          <form class="form_wrapper">
+            <div class="flex-wrapper">
+              <div class="calc_block">
                 <h4>Количество участников:</h4>
                 <div class="flex-wrapper">
                   <div class="quantity_people">
@@ -285,57 +285,57 @@
                     <div class="quantity_people__range"></div>
                   </div>
                   <div class="quantity_people_num">Больше? Выберите 
-                    <input class="form__input_number" type="number" min="12" value="12" name="quantity_people_more">
+                    <input class="form__input_number" type="number" min="1" value="12" name="quantity_people_more">
                   </div>
                 </div>
                 <h4>Дата проведения:</h4>
                 <div class="flex-wrapper">
                   <div>
-                    <input class="form__input_radio" type="radio" id="date1" name="date" value="22-25 августа 2017" checked>
-                    <label class="form__label_radio" for="date1">22-25 августа 2017</label>
+                    <input class="form__input_radio" type="radio" id="date1" name="date" value="22.10.2017 - 25.10.2017" checked>
+                    <label class="form__label_radio" for="date1">22.10.2017 - 25.10.2017</label>
                   </div>
                   <div>
-                    <input class="form__input_radio" type="radio" id="date2" name="date" value="22-25 августа 2017">
-                    <label class="form__label_radio" for="date2">22-25 августа 2017</label>
+                    <input class="form__input_radio" type="radio" id="date2" name="date" value="26.11.2017 - 29.11.2017">
+                    <label class="form__label_radio" for="date2">26.11.2017 - 29.11.2017</label>
                   </div>
                   <div>
-                    <input class="form__input_radio" type="radio" id="date3" name="date" value="22-25 августа 2017">
-                    <label class="form__label_radio" for="date3">22-25 августа 2017</label>
+                    <input class="form__input_radio" type="radio" id="date3" name="date" value="02.12.2017 - 05.12.2017">
+                    <label class="form__label_radio" for="date3">02.12.2017 - 05.12.2017</label>
                   </div>
                 </div>
                 <input class="form__input_checkbox" type="checkbox" id="payment" name="payment" value="Скидка при ранней оплате +10%">
-                <label class="form__label_checkbox" for="payment">Оплата до 8 августа <span class="akcent-color">(скидка 10%)</span></label>
+                <label class="form__label_checkbox" for="payment">Оплата до <span class="time_for_sale"> </span><span class="akcent-color"> (скидка 10% по предоплате)</span></label>
                 <h4>Дополнительно:</h4>
                 <input class="form__input_checkbox" type="checkbox" id="dinner" name="dinner" value="+500 руб/чел. за обед">
                 <label class="form__label_checkbox" for="dinner">Хочу обеды! <span class="akcent-color">+ 500 руб. / обед</span></label>
                 <input class="form__input_checkbox" type="checkbox" id="advanced_training" name="advanced_training" value=" формат повышения квалификации +3500 руб.">
                 <label class="form__label_checkbox" for="advanced_training">Курс в формате повышения квалификации<span class="akcent-color">+ 3500 руб.</span><span class="about_item">По окончании курса вы получаете удостоверение о повышении квалификации</span></label>
-                <div class="center__wrapper">
-                  <input class="form__submit form__submit__big" type="submit" value="Записаться на курс">
+              </div>
+              <div class="price_block">
+                <div class="old_price">
+                  <div class="old_price__title">Базовая цена =</div>
+                  <div class="old_price__rub">10000 руб</div>
                 </div>
-              </form>
-            </div>
-            <div class="price_block">
-              <div class="old_price">
-                <div class="old_price__title">Базовая цена =</div>
-                <div class="old_price__rub">10000 руб</div>
-              </div>
-              <div class="new_price">
-                <div class="new_price__title">Итоговая цена =</div>
-                <div class="new_price__rub">10000 руб</div>
-              </div>
-              <div class="price_block__items">
-                <h5>В стоимость входит:</h5>
-                <ul>
-                  <li>Участие в курсе	</li>
-                  <li>Пакет участника: блокнот, ручка, рабочая тетрадь</li>
-                  <li>Именной сертификат участника</li>
-                  <li>Кофе-паузы в течение обучения</li>
-                  <li>Материалы и презентации курса в электронном виде</li>
-                </ul>
+                <div class="new_price">
+                  <div class="new_price__title">Итоговая цена =</div>
+                  <div class="new_price__rub">10000 руб</div>
+                </div>
+                <div class="price_block__items">
+                  <h5>В стоимость входит:</h5>
+                  <ul>
+                    <li>Участие в курсе	</li>
+                    <li>Пакет участника: блокнот, ручка, рабочая тетрадь</li>
+                    <li>Именной сертификат участника</li>
+                    <li>Кофе-паузы в течение обучения</li>
+                    <li>Материалы и презентации курса в электронном виде</li>
+                  </ul>
+                  <div class="center__wrapper">
+                    <input class="form__submit form__submit__big" type="submit" value="Записаться на курс">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -376,6 +376,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js?ver=0.004"></script>
+    <script src="js/script.js?ver=0.005"></script>
   </body>
 </html>

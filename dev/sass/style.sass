@@ -994,16 +994,20 @@ a.button
 			flex-wrap: nowrap
 			@media (max-width: 1053px)
 				flex-wrap: wrap
-		& > .container > .flex-wrapper
+		& > .container > form > .flex-wrapper
+			position: relative
 			@media (max-width: 1053px)
 				&> div
 					width: 100%
+
 		.calc_block
 			margin: 0
 			padding: 2em
 			background-color: #ededed
 			@media (max-width: 1053px)
 				margin-right: 2em
+			@media (min-width: 1053px)
+				padding-bottom: 6em
 			.flex-wrapper
 				justify-content: space-between
 				flex-wrap: wrap
@@ -1163,3 +1167,9 @@ a.button
 				@media (max-width: 1053px)
 					padding: 1em
 					margin-top: -1em
+
+			.form__submit
+				@media (min-width: 1053px)
+					position: absolute
+					bottom: 1em
+					left: 33%
