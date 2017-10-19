@@ -2256,10 +2256,32 @@ a.button {
       transform: rotate(-10deg);
       top: 45%; }
   .single .price_block_wrapp .price_block .new_price__title {
-    font-weight: 600;
-    color: #440028; }
+    font-weight: 600; }
   .single .price_block_wrapp .price_block .new_price__rub {
     font-size: 3em;
     font-weight: 600;
-    line-height: 1;
-    color: #440028; }
+    line-height: 1; }
+  .single .price_block_wrapp .price_block .old_price__title {
+    background-color: #910055;
+    color: white;
+    margin: -2em -2.8em 1em -2.8em;
+    padding: 0.5em;
+    position: relative; }
+    .single .price_block_wrapp .price_block .old_price__title:before, .single .price_block_wrapp .price_block .old_price__title:after {
+      content: '';
+      display: block;
+      border: 0.4em solid transparent;
+      border-top: 0.4em solid #2b0019;
+      border-right: 0.4em solid #2b0019;
+      width: 0;
+      height: 0;
+      left: 0px;
+      bottom: -0.8em;
+      position: absolute;
+      z-index: 0; }
+    .single .price_block_wrapp .price_block .old_price__title:after {
+      right: 0px;
+      left: initial;
+      border: 0.4em solid transparent;
+      border-left: 0.4em solid #2b0019;
+      border-top: 0.4em solid #2b0019; }

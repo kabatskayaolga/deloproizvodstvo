@@ -1076,6 +1076,7 @@ a.button
 				font-weight: 600
 				position: relative
 				line-height: 1
+
 				&:after
 					position: absolute
 					width: 100%
@@ -1087,9 +1088,34 @@ a.button
 					top: 45%
 			.new_price__title
 				font-weight: 600
-				color: $activeColor
+				// color: $activeColor
 			.new_price__rub
 				font-size: 3em
 				font-weight: 600
 				line-height: 1
-				color: $activeColor
+				// color: $activeColor
+			.old_price__title
+				background-color: lighten($activeColor, 15%)
+				color: white
+				margin: -2em -2.8em 1em -2.8em
+				padding: 0.5em
+				position: relative
+				&:before,
+				&:after
+					content: ''
+					display: block
+					border: 0.4em solid transparent
+					border-top: 0.4em solid darken($activeColor, 5%)
+					border-right: 0.4em solid darken($activeColor, 5%)
+					width: 0
+					height: 0
+					left: 0px
+					bottom: -0.8em
+					position: absolute
+					z-index: 0
+				&:after
+					right: 0px
+					left: initial
+					border: 0.4em solid transparent
+					border-left: 0.4em solid darken($activeColor, 5%)
+					border-top: 0.4em solid darken($activeColor, 5%)
