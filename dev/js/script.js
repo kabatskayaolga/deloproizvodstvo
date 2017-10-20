@@ -262,7 +262,6 @@ jQuery(document).ready(function($){
       max: 11,
       value: 2,
       slide: function( event, ui ) {
-      	// console.log(event, ui);
       	
         if(ui.value >= 2){
         	if($('.quantity_people__sale').length > 0){
@@ -277,9 +276,7 @@ jQuery(document).ready(function($){
         }
          
 	    });
-	    // 
-	    // $( ".quantity_people__size" ).val( $( ".quantity_people__range" ).slider( "value" ) );
-	    
+	  
 
 	    $( ".calc_block input" ).change(function(){
 	    	 calc(this);
@@ -287,23 +284,13 @@ jQuery(document).ready(function($){
 	    	
 	    });
 
-	// var t1s = $('#date1').val().substring(6,10) + ' ' +
-	//  		  $('#date1').val().substring(3,5) + ' ' +
-	//  		  $('#date1').val().substring(0,2);
-	 		  
-	// var time1start = moment(t1s).format('LL');
-	// var timeForSale = moment(t1s).add(-1, 'months').format('LL');
 
-	// var time1finish = moment($('#date1').val().slice(-10)).format('LL');
 
 $(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
-if(+$('.num-days').text() >= 2){
-	$('[for="advanced_training"]').hide();
-}
-
+	if(+$('.num-days').text() >= 2){
+		$('[for="advanced_training"]').hide();
+	}
 });
-
-
 
 
 var oldPrice = parseInt($( ".old_price__rub").text());
@@ -377,3 +364,4 @@ function timeToSale(el){
 	
 }
 timeToSale(elActiveDate);
+calc( ".quantity_people__size" );

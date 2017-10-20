@@ -106,21 +106,35 @@
 			position: absolute
 			right: 0
 			background-color: $activeColor
+			width: 100%
+			text-align: center
+			top: 100px
+			opacity: 0.95
 			// padding: 15px 5%
 		a
 			margin-right: 1em
 			padding: 10px 0
 			border-bottom: 2px solid transparent
 			inline-block
+			position: relative
 			&.active
 				color: white
 				background-color: $activeColor
 				margin-right: 0.7em
 				padding: 10px
-
+			&:after
+				content: ''
+				display: block
+				width: 0%
+				height: 2px
+				position: absolute
+				left: 0
+				background-color: $activeColor
+				transition: 0.4s
 
 			&:hover
-				border-bottom: 2px solid $activeColor
+				&:after
+					width: 100%
 			&.hidden
 				display: none
 			@media (max-width: 890px)

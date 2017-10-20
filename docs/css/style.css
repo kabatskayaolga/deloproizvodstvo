@@ -933,18 +933,32 @@ a.button {
       display: none;
       position: absolute;
       right: 0;
-      background-color: #440028; } }
+      background-color: #440028;
+      width: 100%;
+      text-align: center;
+      top: 100px;
+      opacity: 0.95; } }
   .header_nav__menu .header_nav__menu_wrapper a {
     margin-right: 1em;
     padding: 10px 0;
-    border-bottom: 2px solid transparent; }
+    border-bottom: 2px solid transparent;
+    position: relative; }
     .header_nav__menu .header_nav__menu_wrapper a.active {
       color: white;
       background-color: #440028;
       margin-right: 0.7em;
       padding: 10px; }
-    .header_nav__menu .header_nav__menu_wrapper a:hover {
-      border-bottom: 2px solid #440028; }
+    .header_nav__menu .header_nav__menu_wrapper a:after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      background-color: #440028;
+      transition: 0.4s; }
+    .header_nav__menu .header_nav__menu_wrapper a:hover:after {
+      width: 100%; }
     .header_nav__menu .header_nav__menu_wrapper a.hidden {
       display: none; }
     @media (max-width: 890px) {
