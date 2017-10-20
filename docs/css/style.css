@@ -1180,7 +1180,8 @@ a.button {
     font-size: 0;
     width: 20px;
     bottom: 5px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-appearance: none; }
 
 .dark_section ::-webkit-input-placeholder, footer ::-webkit-input-placeholder {
   color: white; }

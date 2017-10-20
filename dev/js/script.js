@@ -314,7 +314,7 @@ function calc(elem){
 	// Цена учитывая количество людей
 	var priceWithNumberPeople = oldPrice * numberPeople;
 	// Цена учитывая количество людей + включены ли обеды или нет
-	var priceOfDinner = $('[name="dinner"]').prop( "checked" ) ? 500 * numberPeople : 0;
+	var priceOfDinner = $('[name="dinner"]').prop( "checked" ) ? 500 * numberPeople * +$('.num-days').text() : 0;
 	// Цена учитывая количество людей + Курс в формате повышения квалификации или нет
 	var priceOfAdvancedTraining = $('[name="advanced_training"]').prop( "checked" ) ? 3500 * numberPeople : 0;
 
