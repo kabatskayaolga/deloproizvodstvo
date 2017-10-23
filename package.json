@@ -18,5 +18,8 @@
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.0"
+  },
+  "dependencies": {
+    "moment": "^2.19.1"
   }
 }

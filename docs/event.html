@@ -48,7 +48,7 @@
             <div class="head_block">
               <h1><span class="label">Курс повышения квалификации </span><br>Современное делопроизводство для секретаря-помощника руководителя и офис менеджера</h1>
               <p>Программа семинара составлена в соответствии с профессиональным стандартом «Специалист по организационному и документационному обеспечению управления организацией», утвержденным Приказом Минтруда России от 6 мая 2015 года № 276 н .</p>
-              <h3 class="dates">Ближайшие даты: <span class="current_date">29.05-31.05.2017 </span><span class="other_dates">7.06-29.06.2017    </span><span class="other_dates">29.08-31.08.2017</span></h3><a class="button">Подробнее о курсе </a><a class="button active">Ознакомиться с ценами</a>
+              <h3 class="dates">Ближайшие даты: <span class="current_date">29.05-31.05.2017 </span><span class="other_dates">7.06-29.06.2017    </span><span class="other_dates">29.08-31.08.2017</span></h3><a class="button anchor" href="#main">Подробнее о курсе </a><a class="button active anchor" href="#price">Ознакомиться с ценами</a>
             </div>
             <div class="form-block">
               <form class="form_wrapper form_wrapper_column">
@@ -65,14 +65,16 @@
       <div class="information_block_wrapp grey_section">
         <div class="container">
           <div class="flex-wrapper">
-            <div class="main-information">
-              <div> <span class="item">Длительность курса: </span><span class="num-days">3</span> дня</div>
-              <div><span class="item">Даты: </span><br>29.05-31.05.2017<br>27.06-29.06.2017<br>29.08-31.08.2017<br>
+            <div id="main">
+              <div class="main-information">
+                <div> <span class="item">Длительность курса: </span><span class="num-days">3</span> дня</div>
+                <div><span class="item">Даты: </span><br>29.05-31.05.2017<br>27.06-29.06.2017<br>29.08-31.08.2017<br>
+                </div>
+                <div><span class="item">Место проведения: </span>Москва, м. Новокузнецкая, Садовническая ул., 5</div>
+                <div><span class="item">Выдаваемый документ:  </span>Сертификат</div>
+                <div><span class="item">Стоимость: </span>от 19855 руб/чел.</div>
+                <div class="center__wrapper"><a class="button active anchor" href="#price">Записаться на курс</a></div>
               </div>
-              <div><span class="item">Место проведения: </span>Москва, м. Новокузнецкая, Садовническая ул., 5</div>
-              <div><span class="item">Выдаваемый документ:  </span>Сертификат</div>
-              <div><span class="item">Стоимость: </span>от 19855 руб/чел.</div>
-              <div class="center__wrapper"><a class="button active">Записаться на курс</a></div>
             </div>
             <div class="more_information__wrapper">
               <h2>Информация о курсе</h2>
@@ -257,7 +259,7 @@
           </div>
         </div>
       </div>
-      <div class="price_block_wrapp">
+      <div class="price_block_wrapp" id="price">
         <div class="container">
           <div class="center__wrapper">
             <h2>Расчет Вашей цены на обучение</h2>
@@ -329,8 +331,62 @@
                     <li>Кофе-паузы в течение обучения</li>
                     <li>Материалы и презентации курса в электронном виде</li>
                   </ul>
+                  <div class="center__wrapper"><a class="button active big open_modal" href="#form_modal">Записаться на курс</a></div>
+                </div>
+              </div>
+              <div class="form_modal modal" id="form_modal">
+                <div class="modal-content">
+                  <div class="close">&times;</div>
+                  <h3>Заполните форму для регистрации на курс</h3>
+                  <div class="flex-wrapper">
+                    <div class="flex-column__1-3">
+                      <div class="form_block">
+                        <h4>Формат обучения:</h4>
+                        <div>
+                          <input class="toggleItems form__input_radio" type="radio" id="typeOfCourse1" name="typeOfCourse" value="Открытый" checked>
+                          <label class="form__label_radio" for="typeOfCourse1">Открытый</label>
+                        </div>
+                        <div>
+                          <input class="form__input_radio toggleItems" type="radio" id="typeOfCourse2" name="typeOfCourse" value="Закрытый">
+                          <label class="form__label_radio" for="typeOfCourse2">Закрытый</label>
+                        </div>
+                      </div>
+                      <div class="form_block">
+                        <div class="open_block">
+                          <h4>Статус:</h4>
+                          <div>
+                            <input class="toggleItems form__input_radio" type="radio" id="status1" name="status" value="Юридическое лицо" checked>
+                            <label class="form__label_radio" for="status1">Юридическое лицо</label>
+                          </div>
+                          <div>
+                            <input class="form__input_radio toggleItems" type="radio" id="status2" name="status" value="Физическое лицо">
+                            <label class="form__label_radio" for="status2">Физическое лицо</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-column__1-3">
+                      <div>
+                        <h4>Информация о клиенте:</h4>
+                        <div class="open_block">
+                          <input class="form__input" type="text" placeholder="Название компании:"><strong>Бухгалтерские реквизиты:</strong>
+                          <textarea class="form__input" placeholder="для оформления договора и счёта на обучение" rows="5"></textarea>
+                        </div>
+                        <input class="form__input" type="text" placeholder="Контактное лицо:">
+                        <input class="form__input" type="text" placeholder="Контактный телефон:">
+                        <input class="form__input" type="text" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="flex-column__1-3">
+                      <h4>ФИО участников:</h4>
+                      <textarea class="form__input" placeholder="Введите через запятую ФИО участников" rows="10"></textarea>
+                      <h4>Ваши пожелания</h4>
+                      <textarea class="form__input" placeholder="пожелания к программе, место проведения, число участников и пр." rows="10"></textarea>
+                      <p class="small">*При отправлении заявки Вы подтверждаете согласие на обработку своих персональных данных. Мы ценим наших клиентов и никогда не занимаемся рассылкой спама. Ваши данные хранятся только у нас и не передаются другим компаниям.	</p>
+                    </div>
+                  </div>
                   <div class="center__wrapper">
-                    <input class="form__submit form__submit__big" type="submit" value="Записаться на курс">
+                    <input class="form__submit" type="submit" value="Отправить">
                   </div>
                 </div>
               </div>

@@ -286,10 +286,20 @@ jQuery(document).ready(function($){
 
 
 
-$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
+	$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
 	if(+$('.num-days').text() >= 2){
 		$('[for="advanced_training"]').hide();
-	}
+	};
+
+	 $(".anchor").on("click", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top - $('header').height();
+        $('body,html').animate({scrollTop: top}, 700);
+    });
+
+
+
 });
 
 
@@ -306,10 +316,11 @@ function calc(elem){
 
 	} if($(elem).attr('name') == 'date'){
 		timeToSale(elem);
+		console.log('не забудь что нужно хранить дату')
 
 	} 
 	else{
-		// console.log('не забудь что нужно хранить дату')
+		console.log('не забудь что нужно хранить дату')
 	}
 	// Цена учитывая количество людей
 	var priceWithNumberPeople = oldPrice * numberPeople;
@@ -359,9 +370,42 @@ function timeToSale(el){
 		$('.time_for_sale').text(timeForSale);
 
 	} else{
+		$('[name="payment"').prop("checked", false);
 		$('[for="payment"').hide();
 	}
 	
 }
 timeToSale(elActiveDate);
 calc( ".quantity_people__size" );
+
+
+
+// MODAL OPEN
+
+
+$('.open_modal').click(function(e) {
+	e.preventDefault();
+
+	var modalId = $(this).attr('href');
+    $(modalId).css('display', 'flex');
+
+});
+
+$('.close').click(function() {
+   $('.modal').css('display', 'none');
+
+});
+
+window.onclick = function(event) {
+	
+    if ($(event.target).hasClass('modal')) {
+        $('.modal').css('display', 'none');
+    }
+}
+
+
+$( ".form_modal .toggleItems" ).change(function(){
+	if($(this).hasClass('toggleItems')){
+		console.log('5345')
+	}
+});

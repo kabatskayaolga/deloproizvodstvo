@@ -23,8 +23,8 @@ block content
 							span.other_dates 7.06-29.06.2017    
 							span.other_dates 29.08-31.08.2017
 						
-						a.button Подробнее о курсе 
-						a.button.active Ознакомиться с ценами
+						a.button.anchor(href='#main') Подробнее о курсе 
+						a.button.active.anchor(href='#price') Ознакомиться с ценами
 					.form-block
 						form.form_wrapper.form_wrapper_column
 							h4 Записаться на курс
@@ -153,28 +153,29 @@ block content
 							}
 						]
 					each value in info
-						.main-information
-							div 
-								span.item Длительность курса: 
-								span.num-days #{value.main.days}
-								|  дня
-							div
-								span.item Даты: 
-								br
-								each value2 in value.main.dates	
-									| #{value2}
+						#main
+							.main-information
+								div 
+									span.item Длительность курса: 
+									span.num-days #{value.main.days}
+									|  дня
+								div
+									span.item Даты: 
 									br
-							div
-								span.item Место проведения: 
-								| #{value.main.map}
-							div
-								span.item Выдаваемый документ:  
-								| #{value.main.doc}
-							div
-								span.item Стоимость: 
-								| #{value.main.cost}
-							.center__wrapper
-								a.button.active Записаться на курс
+									each value2 in value.main.dates	
+										| #{value2}
+										br
+								div
+									span.item Место проведения: 
+									| #{value.main.map}
+								div
+									span.item Выдаваемый документ:  
+									| #{value.main.doc}
+								div
+									span.item Стоимость: 
+									| #{value.main.cost}
+								.center__wrapper
+									a.button.active.anchor(href='#price') Записаться на курс
 						.more_information__wrapper
 							h2 Информация о курсе
 							.tab_wrapper
@@ -304,7 +305,7 @@ block content
 						div.flex-column__1-5
 							i(class='icon-'+ value.icon).icon_big
 							h4= value.h4
-		.price_block_wrapp
+		.price_block_wrapp#price
 			.container
 				.center__wrapper
 					h2 Расчет Вашей цены на обучение
@@ -383,7 +384,54 @@ block content
 									li Кофе-паузы в течение обучения
 									li Материалы и презентации курса в электронном виде
 								.center__wrapper
-									input.form__submit.form__submit__big(type='submit' value='Записаться на курс')
+									a.button.active.big.open_modal(href='#form_modal') Записаться на курс
+						.form_modal.modal#form_modal
+							.modal-content
+								.close &times;
+								h3 Заполните форму для регистрации на курс
+								.flex-wrapper
+									.flex-column__1-3
+										.form_block
+											h4 Формат обучения:
+
+											div
+												input(type='radio', id='typeOfCourse1', name='typeOfCourse' value='Открытый' checked).toggleItems.form__input_radio
+												label.form__label_radio(for='typeOfCourse1') Открытый
+											div
+												input(type='radio', id='typeOfCourse2', name='typeOfCourse' value='Закрытый' ).form__input_radio.toggleItems
+												label.form__label_radio(for='typeOfCourse2') Закрытый
+										.form_block
+											.open_block
+												h4 Статус:
+
+												div
+													input(type='radio', id='status1', name='status' value='Юридическое лицо' checked).toggleItems.form__input_radio
+													label.form__label_radio(for='status1') Юридическое лицо
+												div
+													input(type='radio', id='status2', name='status' value='Физическое лицо' ).form__input_radio.toggleItems
+													label.form__label_radio(for='status2') Физическое лицо
+									.flex-column__1-3
+										div
+											h4 Информация о клиенте:
+											.open_block
+												input.form__input(type='text' placeholder='Название компании:')
+												strong Бухгалтерские реквизиты:
+												textarea.form__input(placeholder='для оформления договора и счёта на обучение' rows="5")
+											input.form__input(type='text' placeholder='Контактное лицо:')
+											input.form__input(type='text' placeholder='Контактный телефон:')
+											input.form__input(type='text' placeholder='Email')
+									.flex-column__1-3
+										h4 ФИО участников:
+										textarea.form__input(placeholder='Введите через запятую ФИО участников' rows="10")
+
+										h4 Ваши пожелания
+										textarea.form__input(placeholder='пожелания к программе, место проведения, число участников и пр.' rows="10")
+										p.small *При отправлении заявки Вы подтверждаете согласие на обработку своих персональных данных. Мы ценим наших клиентов и никогда не занимаемся рассылкой спама. Ваши данные хранятся только у нас и не передаются другим компаниям.	
+
+								div.center__wrapper
+									
+									input.form__submit(type='submit' value='Отправить')
+
 
 
 	include includes/footer

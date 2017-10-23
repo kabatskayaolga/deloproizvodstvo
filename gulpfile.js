@@ -56,6 +56,8 @@ gulp.task('scripts', function() {
         './dev/assets/jquery-ui.min.js',
         './node_modules/slick-carousel/slick/slick.min.js',
         './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+        './node_modules/moment/min/moment.min.js',
+        './node_modules/moment/locale/ru.js',
         './dev/js/*.js'
         ])
         .pipe(plumber())
