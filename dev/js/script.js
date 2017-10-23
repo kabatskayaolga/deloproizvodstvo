@@ -405,7 +405,10 @@ window.onclick = function(event) {
 
 
 $( ".form_modal .toggleItems" ).change(function(){
-	if($(this).hasClass('toggleItems')){
-		console.log('5345')
+	if($(this).hasClass('toggleItems') & 
+		$(this).prop( "checked" )){
+		$('.open_block').removeClass('active');
+		var attrId = $(this).attr('id');
+		$('.' + attrId).addClass('active');
 	}
 });

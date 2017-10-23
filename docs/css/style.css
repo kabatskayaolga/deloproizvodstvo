@@ -1203,9 +1203,6 @@ a.button {
     cursor: pointer;
     -webkit-appearance: none; }
 
-.dark_section ::-webkit-input-placeholder, footer ::-webkit-input-placeholder {
-  color: white; }
-
 .dark_section :-ms-input-placeholder, footer :-ms-input-placeholder {
   color: white; }
 
@@ -1516,6 +1513,11 @@ a.button {
 
 .form_block {
   margin-bottom: 1em; }
+
+.open_block {
+  display: none; }
+  .open_block.active {
+    display: block; }
 
 .head_block_wrapp {
   background-repeat: no-repeat;

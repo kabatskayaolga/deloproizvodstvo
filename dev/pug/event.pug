@@ -398,10 +398,10 @@ block content
 												input(type='radio', id='typeOfCourse1', name='typeOfCourse' value='Открытый' checked).toggleItems.form__input_radio
 												label.form__label_radio(for='typeOfCourse1') Открытый
 											div
-												input(type='radio', id='typeOfCourse2', name='typeOfCourse' value='Закрытый' ).form__input_radio.toggleItems
-												label.form__label_radio(for='typeOfCourse2') Закрытый
+												input(type='radio', id='typeOfCourse2', name='typeOfCourse' value='Корпоративный' ).form__input_radio.toggleItems
+												label.form__label_radio(for='typeOfCourse2') Корпоративный
 										.form_block
-											.open_block
+											.open_block.active.typeOfCourse1.status1.status2
 												h4 Статус:
 
 												div
@@ -412,20 +412,22 @@ block content
 													label.form__label_radio(for='status2') Физическое лицо
 									.flex-column__1-3
 										div
-											h4 Информация о клиенте:
-											.open_block
+											h4 Контактная информация:
+											.open_block.typeOfCourse1.typeOfCourse2.status1.active
 												input.form__input(type='text' placeholder='Название компании:')
+											.open_block.typeOfCourse1.status1.active
 												strong Бухгалтерские реквизиты:
 												textarea.form__input(placeholder='для оформления договора и счёта на обучение' rows="5")
 											input.form__input(type='text' placeholder='Контактное лицо:')
 											input.form__input(type='text' placeholder='Контактный телефон:')
 											input.form__input(type='text' placeholder='Email')
 									.flex-column__1-3
-										h4 ФИО участников:
-										textarea.form__input(placeholder='Введите через запятую ФИО участников' rows="10")
-
-										h4 Ваши пожелания
-										textarea.form__input(placeholder='пожелания к программе, место проведения, число участников и пр.' rows="10")
+										.open_block.typeOfCourse1.status1.status2.active
+											h4 ФИО участников:
+											textarea.form__input(placeholder='Введите через запятую ФИО участников' rows="8")
+										.open_block.typeOfCourse2
+											h4 Ваши пожелания
+											textarea.form__input(placeholder='пожелания к программе, место проведения, число участников и пр.' rows="8")
 										p.small *При отправлении заявки Вы подтверждаете согласие на обработку своих персональных данных. Мы ценим наших клиентов и никогда не занимаемся рассылкой спама. Ваши данные хранятся только у нас и не передаются другим компаниям.	
 
 								div.center__wrapper

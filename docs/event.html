@@ -347,12 +347,12 @@
                           <label class="form__label_radio" for="typeOfCourse1">Открытый</label>
                         </div>
                         <div>
-                          <input class="form__input_radio toggleItems" type="radio" id="typeOfCourse2" name="typeOfCourse" value="Закрытый">
-                          <label class="form__label_radio" for="typeOfCourse2">Закрытый</label>
+                          <input class="form__input_radio toggleItems" type="radio" id="typeOfCourse2" name="typeOfCourse" value="Корпоративный">
+                          <label class="form__label_radio" for="typeOfCourse2">Корпоративный</label>
                         </div>
                       </div>
                       <div class="form_block">
-                        <div class="open_block">
+                        <div class="open_block active typeOfCourse1 status1 status2">
                           <h4>Статус:</h4>
                           <div>
                             <input class="toggleItems form__input_radio" type="radio" id="status1" name="status" value="Юридическое лицо" checked>
@@ -367,9 +367,11 @@
                     </div>
                     <div class="flex-column__1-3">
                       <div>
-                        <h4>Информация о клиенте:</h4>
-                        <div class="open_block">
-                          <input class="form__input" type="text" placeholder="Название компании:"><strong>Бухгалтерские реквизиты:</strong>
+                        <h4>Контактная информация:</h4>
+                        <div class="open_block typeOfCourse1 typeOfCourse2 status1 active">
+                          <input class="form__input" type="text" placeholder="Название компании:">
+                        </div>
+                        <div class="open_block typeOfCourse1 status1 active"><strong>Бухгалтерские реквизиты:</strong>
                           <textarea class="form__input" placeholder="для оформления договора и счёта на обучение" rows="5"></textarea>
                         </div>
                         <input class="form__input" type="text" placeholder="Контактное лицо:">
@@ -378,10 +380,14 @@
                       </div>
                     </div>
                     <div class="flex-column__1-3">
-                      <h4>ФИО участников:</h4>
-                      <textarea class="form__input" placeholder="Введите через запятую ФИО участников" rows="10"></textarea>
-                      <h4>Ваши пожелания</h4>
-                      <textarea class="form__input" placeholder="пожелания к программе, место проведения, число участников и пр." rows="10"></textarea>
+                      <div class="open_block typeOfCourse1 status1 status2 active">
+                        <h4>ФИО участников:</h4>
+                        <textarea class="form__input" placeholder="Введите через запятую ФИО участников" rows="8"></textarea>
+                      </div>
+                      <div class="open_block typeOfCourse2">
+                        <h4>Ваши пожелания</h4>
+                        <textarea class="form__input" placeholder="пожелания к программе, место проведения, число участников и пр." rows="8"></textarea>
+                      </div>
                       <p class="small">*При отправлении заявки Вы подтверждаете согласие на обработку своих персональных данных. Мы ценим наших клиентов и никогда не занимаемся рассылкой спама. Ваши данные хранятся только у нас и не передаются другим компаниям.	</p>
                     </div>
                   </div>
