@@ -27,8 +27,7 @@
 			// color: white
 			margin: -1.54em -1.54em 1em -1.53em
 			border-bottom: 2px solid rgba(68, 0, 40, 0.05)
-			padding-bottom: 1em
-			padding-top: 1em
+			padding: 1em
 			// box-shadow: 10px 10px 100px black
 
 		.flex-wrapper
@@ -41,32 +40,44 @@
 					// background-color: #efefef
 					border-left: 1px solid #e6dfe3
 					border-right: 1px solid #e6dfe3
-/* The Close Button */
-.close
-	color: #aaaaaa
-	position: absolute
-	right: 0.7em
-	top: 0.3em
-	font-size: 28px
-	font-weight: bold
+	/* The Close Button */
+	.close
+		color: #aaaaaa
+		position: absolute
+		right: 0.7em
+		top: 0.3em
+		font-size: 28px
+		font-weight: bold
 
-.close:hover,
-.close:focus
-	color: #000
-	text-decoration: none
-	cursor: pointer
-.form_wrapper
-	.form	
-		&__input,
-		&__select
-			width: 100%
-			padding: 0.3em 0
-			max-width: 100%
-			min-width: 100%
-			resize: vertical
-.form_block
-	margin-bottom: 1em
-.open_block
-	display: none
-	&.active
-		display: block
+	.close:hover,
+	.close:focus
+		color: #000
+		text-decoration: none
+		cursor: pointer
+	.form_wrapper
+		.form	
+			&__input,
+			&__select
+				width: 100%
+				padding: 0.3em 0
+				max-width: 100%
+				min-width: 100%
+				resize: vertical
+	.form_block
+		margin-bottom: 1em
+	.open_block
+		display: none
+		&.active
+			display: block
+	.info-block
+		background-color: #e6dfe3
+		padding: 1em
+		span
+			font-weight: bold
+		h4
+			margin: 1em -0.9em -1em
+			padding: 1em
+			background-color: $activeColor
+			color: white
+		// .price_span
+		// 	font-size: 1.5em

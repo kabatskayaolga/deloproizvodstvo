@@ -414,24 +414,32 @@ block content
 										div
 											h4 Контактная информация:
 											.open_block.typeOfCourse1.typeOfCourse2.status1.active
-												input.form__input(type='text' placeholder='Название компании:')
+												input.form__input(type='text' placeholder='Название компании')
 											.open_block.typeOfCourse1.status1.active
 												strong Бухгалтерские реквизиты:
 												textarea.form__input(placeholder='для оформления договора и счёта на обучение' rows="5")
-											input.form__input(type='text' placeholder='Контактное лицо:')
-											input.form__input(type='text' placeholder='Контактный телефон:')
+											input.form__input(type='text' placeholder='Контактное лицо')
+											input.form__input(type='text' placeholder='Контактный телефон')
 											input.form__input(type='text' placeholder='Email')
-									.flex-column__1-3
+									.flex-column__1-3.flex-wrapper.flex-content-column
 										.open_block.typeOfCourse1.status1.status2.active
 											h4 ФИО участников:
-											textarea.form__input(placeholder='Введите через запятую ФИО участников' rows="8")
+											textarea.form__input(placeholder='Введите через запятую ФИО участников' rows="5")
 										.open_block.typeOfCourse2
 											h4 Ваши пожелания
-											textarea.form__input(placeholder='пожелания к программе, место проведения, число участников и пр.' rows="8")
-										p.small *При отправлении заявки Вы подтверждаете согласие на обработку своих персональных данных. Мы ценим наших клиентов и никогда не занимаемся рассылкой спама. Ваши данные хранятся только у нас и не передаются другим компаниям.	
-
+											textarea.form__input(placeholder='пожелания к программе, место проведения, число участников и пр.' rows="5")
+										div.info-block
+											p Количество человек: 
+												span.quantity_people_span 1
+											p Количество дней: 
+												span.quantity_days
+											p Дата проведения: 
+												span.quantity_days_span
+											h4 Стоимость: 
+												span.price_span 
+								br
 								div.center__wrapper
-									
+									p.small *При отправлении заявки Вы подтверждаете согласие на обработку своих персональных данных. Мы ценим наших клиентов и никогда не занимаемся рассылкой спама. Ваши данные хранятся только у нас и не передаются другим компаниям.	
 									input.form__submit(type='submit' value='Отправить')
 
 

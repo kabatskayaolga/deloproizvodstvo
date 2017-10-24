@@ -1459,7 +1459,8 @@ a.button {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100; }
+  z-index: 100;
+  /* The Close Button */ }
   .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -1476,8 +1477,7 @@ a.button {
       background-color: #e6dfe3;
       margin: -1.54em -1.54em 1em -1.53em;
       border-bottom: 2px solid rgba(68, 0, 40, 0.05);
-      padding-bottom: 1em;
-      padding-top: 1em; }
+      padding: 1em; }
     .modal-content .flex-wrapper {
       -ms-flex-align: stretch !important;
           align-items: stretch !important;
@@ -1488,36 +1488,40 @@ a.button {
         .modal-content .flex-wrapper .flex-column__1-3:nth-child(2) {
           border-left: 1px solid #e6dfe3;
           border-right: 1px solid #e6dfe3; }
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  position: absolute;
-  right: 0.7em;
-  top: 0.3em;
-  font-size: 28px;
-  font-weight: bold; }
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer; }
-
-.form_wrapper .form__input, .form_wrapper .form__select {
-  width: 100%;
-  padding: 0.3em 0;
-  max-width: 100%;
-  min-width: 100%;
-  resize: vertical; }
-
-.form_block {
-  margin-bottom: 1em; }
-
-.open_block {
-  display: none; }
-  .open_block.active {
-    display: block; }
+  .modal .close {
+    color: #aaaaaa;
+    position: absolute;
+    right: 0.7em;
+    top: 0.3em;
+    font-size: 28px;
+    font-weight: bold; }
+  .modal .close:hover,
+  .modal .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
+  .modal .form_wrapper .form__input, .modal .form_wrapper .form__select {
+    width: 100%;
+    padding: 0.3em 0;
+    max-width: 100%;
+    min-width: 100%;
+    resize: vertical; }
+  .modal .form_block {
+    margin-bottom: 1em; }
+  .modal .open_block {
+    display: none; }
+    .modal .open_block.active {
+      display: block; }
+  .modal .info-block {
+    background-color: #e6dfe3;
+    padding: 1em; }
+    .modal .info-block span {
+      font-weight: bold; }
+    .modal .info-block h4 {
+      margin: 1em -0.9em -1em;
+      padding: 1em;
+      background-color: #440028;
+      color: white; }
 
 .head_block_wrapp {
   background-repeat: no-repeat;
@@ -2465,3 +2469,7 @@ a.button {
       position: absolute;
       bottom: 1em;
       left: 33%; } }
+
+.single .price_block_wrapp .flex-content-column {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }

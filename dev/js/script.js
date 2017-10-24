@@ -315,8 +315,9 @@ function calc(elem){
 		numberPeople = $(elem).val();
 
 	} if($(elem).attr('name') == 'date'){
+		var date = $(elem).val();
 		timeToSale(elem);
-		console.log('не забудь что нужно хранить дату')
+		console.log(date)
 
 	} 
 	else{
@@ -346,11 +347,16 @@ function calc(elem){
 	// Выводим новые цены
 	$( ".old_price__rub").text(newPrice + ' руб');
 	$( ".new_price__rub").text(newPriceWithQuantuty + ' руб');
-	
-
+	$('.quantity_people_span').text(numberPeople);
+	$('.quantity_days').text(+$('.num-days').text());
+	$('.quantity_days_span').text(date);
+	$('.price_span').text(newPriceWithQuantuty + ' руб');
 
 
 }
+
+$('.quantity_days_span').text($('[name="date"][checked]').val());
+$('.price_span').text($( ".new_price__rub").text());
 
 // Выбранная дата по умолчанию
 var elActiveDate = '#date1';
@@ -407,8 +413,14 @@ window.onclick = function(event) {
 $( ".form_modal .toggleItems" ).change(function(){
 	if($(this).hasClass('toggleItems') & 
 		$(this).prop( "checked" )){
+		if ($(this).attr('id') == 'typeOfCourse1') {
+
+			$('#status1').prop( "checked", true );
+
+		} else {}
 		$('.open_block').removeClass('active');
 		var attrId = $(this).attr('id');
 		$('.' + attrId).addClass('active');
 	}
 });
+
