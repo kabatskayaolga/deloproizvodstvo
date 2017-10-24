@@ -357,7 +357,7 @@ function calc(elem){
 
 $('.quantity_days_span').text($('[name="date"][checked]').val());
 $('.price_span').text($( ".new_price__rub").text());
-
+$('.name_of_cource_span').text('«'+ $( ".name_of_cource").text()+ '»');
 // Выбранная дата по умолчанию
 var elActiveDate = '#date1';
 
