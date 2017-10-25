@@ -284,7 +284,9 @@ jQuery(document).ready(function($){
 	    	
 	    });
 
-
+	if($('body').hasClass('single')){
+		
+	
 
 	$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
 	if(+$('.num-days').text() >= 2){
@@ -300,7 +302,7 @@ jQuery(document).ready(function($){
 
 
 
-});
+
 
 
 var oldPrice = parseInt($( ".old_price__rub").text());
@@ -423,4 +425,5 @@ $( ".form_modal .toggleItems" ).change(function(){
 		$('.' + attrId).addClass('active');
 	}
 });
-
+}
+});

@@ -114,15 +114,19 @@
 		a
 			margin-right: 1em
 			padding: 10px 0
-			border-bottom: 2px solid transparent
 			inline-block
 			position: relative
 			text-decoration: none
 			&.active
-				color: white
-				background-color: $activeColor
-				margin-right: 0.7em
-				padding: 10px
+				&:after
+					content: ''
+					display: block
+					width: 100%
+					height: 2px
+					position: absolute
+					left: 0
+					background-color: $activeColor
+					transition: 0.4s
 			&:after
 				content: ''
 				display: block
@@ -130,6 +134,7 @@
 				height: 2px
 				position: absolute
 				left: 0
+				bottom: 0
 				background-color: $activeColor
 				transition: 0.4s
 
@@ -155,31 +160,25 @@
 		@media (max-width: 1580px) and (min-width: 890px)
 			a
 
-				&.active
-					padding: 10px 0
-					background-color: transparent
-					color: $activeColor
-					border-bottom: 2px solid $activeColor
 				&.hidden
 					display: inline
 			.sub_menu_wrapper
 				&:hover
 					> a
-						border-bottom: 2px solid $activeColor
+						
 
 					.sub_menu
 						display: block
 						position: absolute
-						top: 160%
-						z-index: 432
+						top: 130%
+						z-index: 10
 						background-color: rgba(255, 255, 255, 0.85)
 						border-left: 2px solid $activeColor
 						a
 							display: block
 							padding: 10px
 							margin: 0
-							&:hover
-								background-color: white
+	
 
 			.sub_menu
 				display: none
@@ -196,5 +195,4 @@
 					padding: 10px 5%
 					background-color: white
 					color: $activeColor
-					border-top: 2px solid $activeColor
 					margin-top: -2px
