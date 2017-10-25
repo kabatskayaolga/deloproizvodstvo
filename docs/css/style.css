@@ -1197,6 +1197,9 @@ a.button {
     cursor: pointer;
     -webkit-appearance: none; }
 
+.dark_section ::-webkit-input-placeholder, footer ::-webkit-input-placeholder {
+  color: white; }
+
 .dark_section :-ms-input-placeholder, footer :-ms-input-placeholder {
   color: white; }
 

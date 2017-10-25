@@ -286,144 +286,144 @@ jQuery(document).ready(function($){
 
 	if($('body').hasClass('single')){
 		
-	
 
-	$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
-	if(+$('.num-days').text() >= 2){
-		$('[for="advanced_training"]').hide();
-	};
+		$(".ui-slider-range").append("<div class='quantity_people__sale' style=''>скидка 10%</div>");
+		if(+$('.num-days').text() >= 2){
+			$('[for="advanced_training"]').hide();
+		};
 
-	 $(".anchor").on("click", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top - $('header').height();
-        $('body,html').animate({scrollTop: top}, 700);
-    });
-
+		 $(".anchor").on("click", function (event) {
+	        event.preventDefault();
+	        var id  = $(this).attr('href'),
+	            top = $(id).offset().top - $('header').height();
+	        $('body,html').animate({scrollTop: top}, 700);
+	    });
 
 
+		var oldPrice = parseInt($( ".old_price__rub").text());
+		var numberPeople = 1;
+
+		function calc(elem){
+
+			var counter = 0;
+
+			if($(elem).attr('name') == 'quantity_people' || 
+				$(elem).attr('name') == 'quantity_people_more'){
+				numberPeople = $(elem).val();
+
+			} if($(elem).attr('name') == 'date'){
+				var date = $(elem).val();
+				timeToSale(elem);
+				console.log(date)
+
+			} 
+			else{
+				console.log('не забудь что нужно хранить дату')
+			}
+			// Цена учитывая количество людей
+			var priceWithNumberPeople = oldPrice * numberPeople;
+			// Цена учитывая количество людей + включены ли обеды или нет
+			var priceOfDinner = $('[name="dinner"]').prop( "checked" ) ? 500 * numberPeople * +$('.num-days').text() : 0;
+			// Цена учитывая количество людей + Курс в формате повышения квалификации или нет
+			var priceOfAdvancedTraining = $('[name="advanced_training"]').prop( "checked" ) ? 3500 * numberPeople : 0;
+
+			counter = $('[name="payment"]').prop( "checked" ) & numberPeople > 1 ? 20 : 
+					  $('[name="payment"]').prop( "checked" ) & numberPeople == 1 ? 10 :
+					  $('[name="payment"]').prop( "checked" ) == false & numberPeople > 1 ? 10 : 0 ;
+
+			// Итоговая цена без скидки
+			var newPrice = priceWithNumberPeople + priceOfDinner + priceOfAdvancedTraining;
+
+			// Итоговая цена с учетом скидки
+			var newPriceWithQuantuty = newPrice - ((priceWithNumberPeople/100) * counter)
+
+			// console.log(priceWithNumberPeople, priceOfDinner, priceOfAdvancedTraining, counter);
 
 
 
-var oldPrice = parseInt($( ".old_price__rub").text());
-var numberPeople = 1;
+			// Выводим новые цены
+			$( ".old_price__rub").text(newPrice + ' руб');
+			$( ".new_price__rub").text(newPriceWithQuantuty + ' руб');
 
-function calc(elem){
+			// Перезаписываем данные в форме
+			$('.quantity_people_span').text(numberPeople);
+			$('.quantity_days').text(+$('.num-days').text());
+			$('.quantity_days_span').text(date);
+			$('.price_span').text(newPriceWithQuantuty + ' руб');
 
-	var counter = 0;
 
-	if($(elem).attr('name') == 'quantity_people' || 
-		$(elem).attr('name') == 'quantity_people_more'){
-		numberPeople = $(elem).val();
+		}
 
-	} if($(elem).attr('name') == 'date'){
-		var date = $(elem).val();
-		timeToSale(elem);
-		console.log(date)
+		$('.quantity_days_span').text($('[name="date"][checked]').val());
+		$('.price_span').text($( ".new_price__rub").text());
+		$('.name_of_cource_span').text('«'+ $( ".name_of_cource").text()+ '»');
+		// Выбранная дата по умолчанию
+		var elActiveDate = '#date1';
 
-	} 
-	else{
-		console.log('не забудь что нужно хранить дату')
+		function timeToSale(el){
+
+			// дата в виде строки
+			var ts = $(el).val().substring(6,10) + ' ' +
+		 		  $(el).val().substring(3,5) + ' ' +
+		 		  $(el).val().substring(0,2);
+		 	
+			var timeForSaleNoFormat = moment(ts, "YYYY MM DD").add(-1, 'months');
+			var timeForSale = moment(ts, "YYYY MM DD").add(-1, 'months').format('LL');
+			// moment().isBefore(timeForSale);
+			if(moment().isBefore(timeForSaleNoFormat)) {
+				$('[for="payment"]').show();
+				$('.time_for_sale').text(timeForSale);
+
+			} else{
+				$('[name="payment"]').prop("checked", false);
+				$('[for="payment"]').hide();
+			}
+			
+		}
+		timeToSale(elActiveDate);
+		calc( ".quantity_people__size" );
+
+
+
+		// MODAL OPEN
+
+
+		$('.open_modal').click(function(e) {
+			e.preventDefault();
+			var modalId = $(this).attr('href');
+		    $(modalId).css('display', 'flex');
+		    if($('#typeOfCourse2').prop("checked")) {
+				$('.price_span').text('под запрос');
+			}
+		});
+
+		$('.close').click(function() {
+		   $('.modal').css('display', 'none');
+		});
+
+		window.onclick = function(event) {
+			
+		    if ($(event.target).hasClass('modal')) {
+		        $('.modal').css('display', 'none');
+		    }
+		}
+
+
+		$( ".form_modal .toggleItems" ).change(function(){
+			if($(this).hasClass('toggleItems') & 
+				$(this).prop( "checked" )){
+
+				$('.price_span').text($('.new_price__rub').text());
+
+				if ($(this).attr('id') == 'typeOfCourse1') {
+					$('#status1').prop( "checked", true );
+				} else if($(this).attr('id') == 'typeOfCourse2') {
+					$('.price_span').text('под запрос');
+				}
+				$('.open_block').removeClass('active');
+				var attrId = $(this).attr('id');
+				$('.' + attrId).addClass('active');
+			}
+		});
 	}
-	// Цена учитывая количество людей
-	var priceWithNumberPeople = oldPrice * numberPeople;
-	// Цена учитывая количество людей + включены ли обеды или нет
-	var priceOfDinner = $('[name="dinner"]').prop( "checked" ) ? 500 * numberPeople * +$('.num-days').text() : 0;
-	// Цена учитывая количество людей + Курс в формате повышения квалификации или нет
-	var priceOfAdvancedTraining = $('[name="advanced_training"]').prop( "checked" ) ? 3500 * numberPeople : 0;
-
-	counter = $('[name="payment"]').prop( "checked" ) & numberPeople > 1 ? 20 : 
-			  $('[name="payment"]').prop( "checked" ) & numberPeople == 1 ? 10 :
-			  $('[name="payment"]').prop( "checked" ) == false & numberPeople > 1 ? 10 : 0 ;
-
-	// Итоговая цена без скидки
-	var newPrice = priceWithNumberPeople + priceOfDinner + priceOfAdvancedTraining;
-
-	// Итоговая цена с учетом скидки
-	var newPriceWithQuantuty = newPrice - ((priceWithNumberPeople/100) * counter)
-
-	// console.log(priceWithNumberPeople, priceOfDinner, priceOfAdvancedTraining, counter);
-
-
-
-	// Выводим новые цены
-	$( ".old_price__rub").text(newPrice + ' руб');
-	$( ".new_price__rub").text(newPriceWithQuantuty + ' руб');
-	$('.quantity_people_span').text(numberPeople);
-	$('.quantity_days').text(+$('.num-days').text());
-	$('.quantity_days_span').text(date);
-	$('.price_span').text(newPriceWithQuantuty + ' руб');
-
-
-}
-
-$('.quantity_days_span').text($('[name="date"][checked]').val());
-$('.price_span').text($( ".new_price__rub").text());
-$('.name_of_cource_span').text('«'+ $( ".name_of_cource").text()+ '»');
-// Выбранная дата по умолчанию
-var elActiveDate = '#date1';
-
-function timeToSale(el){
-
-	// дата в виде строки
-	var ts = $(el).val().substring(6,10) + ' ' +
- 		  $(el).val().substring(3,5) + ' ' +
- 		  $(el).val().substring(0,2);
- 	
-	var timeForSaleNoFormat = moment(ts, "YYYY MM DD").add(-1, 'months');
-	var timeForSale = moment(ts, "YYYY MM DD").add(-1, 'months').format('LL');
-	// moment().isBefore(timeForSale);
-	if(moment().isBefore(timeForSaleNoFormat)) {
-		$('[for="payment"').show();
-		$('.time_for_sale').text(timeForSale);
-
-	} else{
-		$('[name="payment"').prop("checked", false);
-		$('[for="payment"').hide();
-	}
-	
-}
-timeToSale(elActiveDate);
-calc( ".quantity_people__size" );
-
-
-
-// MODAL OPEN
-
-
-$('.open_modal').click(function(e) {
-	e.preventDefault();
-
-	var modalId = $(this).attr('href');
-    $(modalId).css('display', 'flex');
-
-});
-
-$('.close').click(function() {
-   $('.modal').css('display', 'none');
-
-});
-
-window.onclick = function(event) {
-	
-    if ($(event.target).hasClass('modal')) {
-        $('.modal').css('display', 'none');
-    }
-}
-
-
-$( ".form_modal .toggleItems" ).change(function(){
-	if($(this).hasClass('toggleItems') & 
-		$(this).prop( "checked" )){
-		if ($(this).attr('id') == 'typeOfCourse1') {
-
-			$('#status1').prop( "checked", true );
-
-		} else {}
-		$('.open_block').removeClass('active');
-		var attrId = $(this).attr('id');
-		$('.' + attrId).addClass('active');
-	}
-});
-}
 });
